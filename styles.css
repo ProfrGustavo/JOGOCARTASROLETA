@@ -47,7 +47,7 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
