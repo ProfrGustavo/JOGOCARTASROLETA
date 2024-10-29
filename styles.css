@@ -47,9 +47,29 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    font-size: 14px;
+    font-weight: bold; /* Adiciona o negrito */
+    font-size: 4vw; /* Tamanho da fonte responsivo baseado na largura da tela */
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Exemplos de media queries para ajustar o tamanho da fonte em telas menores */
+@media (max-width: 600px) {
+    .card {
+        font-size: 5vw; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .card {
+        font-size: 4vw; /* Ajusta o tamanho da fonte para telas médias */
+    }
+}
+
+@media (min-width: 901px) {
+    .card {
+        font-size: 3vw; /* Ajusta o tamanho da fonte para telas grandes */
+    }
 }
 
 .card.flipped {
