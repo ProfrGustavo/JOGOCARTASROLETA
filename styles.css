@@ -47,13 +47,14 @@ body {
     justify-content: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    font-size: 20px;
+    font-size: 20px; /* Tamanho da fonte padrão */
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card.flipped {
     transform: rotateY(180deg);
+    font-size: 24px; /* Aumenta o tamanho da fonte quando a carta é flipada */
 }
 
 .expanded-question {
