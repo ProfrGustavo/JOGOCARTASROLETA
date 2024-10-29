@@ -52,6 +52,8 @@ body {
     font-size: 20px;
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: white; /* Adiciona a cor branca ao texto */
+}
 }
 
 .card:hover {
