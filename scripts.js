@@ -62,7 +62,7 @@ const questionContent = document.getElementById("question-content");
 for (let i = 0; i < 50; i++) {
     const card = document.createElement("div");
     card.classList.add("card");
-    card.innerText = "Carta " + (i + 1);
+    card.innerText = "" + (i + 1);
     card.addEventListener("click", () => flipCard(card, i));
     cardsContainer.appendChild(card);
 }
