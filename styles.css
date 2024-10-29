@@ -58,8 +58,8 @@ body {
 }
 
 .card:hover {
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
-    transform: translateY(-3px); /* Eleva a carta um pouco para cima */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
 }
 
 
