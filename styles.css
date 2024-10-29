@@ -40,7 +40,9 @@ body {
 .card {
     width: 70px;
     height: 100px;
-    background-color: #fff;
+    background-image: url('https://ouromoderno.com.br/wp-content/uploads/2018/04/Empreendedorismo.png');
+    background-size: cover; /* Faz a imagem cobrir todo o cartão */
+    background-position: center; /* Centraliza a imagem */
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -51,6 +53,7 @@ body {
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 .card.flipped {
     transform: rotateY(180deg);
