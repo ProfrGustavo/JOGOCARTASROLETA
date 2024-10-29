@@ -46,7 +46,8 @@ body {
     border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    flex-direction: column; /* Altera a direção do flex para coluna */
+    justify-content: flex-end; /* Alinha o conteúdo no final da carta */
     cursor: pointer;
     transition: transform 0.3s ease;
     font-size: 20px;
