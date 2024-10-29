@@ -54,6 +54,11 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.card:hover {
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    transform: translateY(-3px); /* Eleva a carta um pouco para cima */
+}
+
 
 .card.flipped {
     transform: rotateY(180deg);
