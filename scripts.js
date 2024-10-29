@@ -80,7 +80,10 @@ function closeExpandedQuestion() {
     expandedQuestion.classList.remove("show");
     const flippedCards = document.querySelectorAll(".card.flipped");
     if (flippedCards.length > 0) {
-        flippedCards[flippedCards.length - 1].style.visibility = "hidden";
+        flippedCards.forEach(card => {
+            card.classList.remove("flipped"); // Gira de volta a carta
+            card.style.display = "none"; // Oculta a carta
+        });
     }
 }
 
