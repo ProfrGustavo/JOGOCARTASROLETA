@@ -1,20 +1,20 @@
 // Array de perguntas para as cartas
 const perguntas = [
-   "1) Qual é a importância do empreendedorismo na economia?",
-"2) Quais são os principais tipos de empreendedores?",
-"3) Como a inovação está relacionada ao empreendedorismo?",
-"4) O que caracteriza um empreendedor de sucesso?",
-"5) Quais são as principais diferenças entre empreendedorismo e gestão empresarial?",
-"6) Por que é importante elaborar um plano de negócios?",
-"7) Quais elementos devem ser incluídos em um plano de negócios eficaz?",
-"8) Como a análise SWOT pode ajudar na elaboração de estratégias empresariais?",
-"9) Qual a importância da definição de metas e objetivos no empreendedorismo?",
-"10) Como realizar uma pesquisa de mercado para entender o seu público-alvo?",
-"11) Como calcular o ponto de equilíbrio de um negócio?",
-"12) O que deve ser considerado ao definir o preço de um produto ou serviço?",
-"13) Quais são as principais fontes de financiamento para novos empreendimentos?",
-"14) Como a gestão de fluxo de caixa pode impactar a sobrevivência de um negócio?",
-"15) Quais são as diferenças entre lucro, receita e custo?",
+  "1) Como a experiência da guerra moldou a visão de mundo dos artistas e escritores da época?"
+"2) Quais foram os principais temas abordados na literatura e nas artes visuais durante e após a guerra?"
+"3) De que forma o horror e a violência da guerra se manifestaram nas obras de arte?"
+"4) Como o movimento expressionista e o surrealismo refletiram os traumas e angústias da época?"
+"5) Quais os impactos da guerra na produção literária e artística de países como Alemanha, França e Estados Unidos?"
+"6) Como a literatura e a arte foram utilizadas como ferramentas de propaganda durante a guerra?"
+"7) Qual o papel da fotografia na documentação dos horrores da guerra e na construção da memória histórica?"
+"8) Como a música foi utilizada para expressar sentimentos de patriotismo, resistência e luto?"
+"9) Quais os principais escritores e artistas que se destacaram durante e após a Segunda Guerra Mundial?"
+"10) Como a guerra influenciou o desenvolvimento de novos movimentos artísticos e literários?"
+"11) De que forma a arte e a literatura contribuíram para a reconstrução da Europa após a guerra?"
+"12) Como a experiência dos campos de concentração e a Shoah foram representadas nas artes visuais e na literatura?"
+"13) Quais as principais características do existencialismo e como este movimento filosófico se relaciona com a experiência da guerra?"
+"14) Como a guerra impactou a produção cinematográfica e quais foram os principais filmes sobre o tema?"
+"15) Qual o legado da Segunda Guerra Mundial para a arte e a literatura contemporâneas?"
 "16) O que é marketing digital e como ele pode beneficiar um novo negócio?",
 "17) Quais são as principais estratégias de marketing para pequenas empresas?",
 "18) Como construir uma identidade visual para uma marca?",
