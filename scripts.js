@@ -1,20 +1,20 @@
 // Array de perguntas para as cartas
 const perguntas = [
-  "1) Como a experiência da guerra moldou a visão de mundo dos artistas e escritores da época?"
-"2) Quais foram os principais temas abordados na literatura e nas artes visuais durante e após a guerra?"
-"3) De que forma o horror e a violência da guerra se manifestaram nas obras de arte?"
-"4) Como o movimento expressionista e o surrealismo refletiram os traumas e angústias da época?"
-"5) Quais os impactos da guerra na produção literária e artística de países como Alemanha, França e Estados Unidos?"
-"6) Como a literatura e a arte foram utilizadas como ferramentas de propaganda durante a guerra?"
-"7) Qual o papel da fotografia na documentação dos horrores da guerra e na construção da memória histórica?"
-"8) Como a música foi utilizada para expressar sentimentos de patriotismo, resistência e luto?"
-"9) Quais os principais escritores e artistas que se destacaram durante e após a Segunda Guerra Mundial?"
-"10) Como a guerra influenciou o desenvolvimento de novos movimentos artísticos e literários?"
-"11) De que forma a arte e a literatura contribuíram para a reconstrução da Europa após a guerra?"
-"12) Como a experiência dos campos de concentração e a Shoah foram representadas nas artes visuais e na literatura?"
-"13) Quais as principais características do existencialismo e como este movimento filosófico se relaciona com a experiência da guerra?"
-"14) Como a guerra impactou a produção cinematográfica e quais foram os principais filmes sobre o tema?"
-"15) Qual o legado da Segunda Guerra Mundial para a arte e a literatura contemporâneas?"
+  "1) Como a experiência da guerra moldou a visão de mundo dos artistas e escritores da época?",
+"2) Quais foram os principais temas abordados na literatura e nas artes visuais durante e após a guerra?",
+"3) De que forma o horror e a violência da guerra se manifestaram nas obras de arte?",
+"4) Como o movimento expressionista e o surrealismo refletiram os traumas e angústias da época?",
+"5) Quais os impactos da guerra na produção literária e artística de países como Alemanha, França e Estados Unidos?",
+"6) Como a literatura e a arte foram utilizadas como ferramentas de propaganda durante a guerra?",
+"7) Qual o papel da fotografia na documentação dos horrores da guerra e na construção da memória histórica?",
+"8) Como a música foi utilizada para expressar sentimentos de patriotismo, resistência e luto?",
+"9) Quais os principais escritores e artistas que se destacaram durante e após a Segunda Guerra Mundial?",
+"10) Como a guerra influenciou o desenvolvimento de novos movimentos artísticos e literários?",
+"11) De que forma a arte e a literatura contribuíram para a reconstrução da Europa após a guerra?",
+"12) Como a experiência dos campos de concentração e a Shoah foram representadas nas artes visuais e na literatura?",
+"13) Quais as principais características do existencialismo e como este movimento filosófico se relaciona com a experiência da guerra?",
+"14) Como a guerra impactou a produção cinematográfica e quais foram os principais filmes sobre o tema?",
+"15) Qual o legado da Segunda Guerra Mundial para a arte e a literatura contemporâneas?",
 "16) O que é marketing digital e como ele pode beneficiar um novo negócio?",
 "17) Quais são as principais estratégias de marketing para pequenas empresas?",
 "18) Como construir uma identidade visual para uma marca?",
