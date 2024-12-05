@@ -3,7 +3,7 @@ const perguntas = [
   "1) quanto é 1 + 1?",
  "1) quanto é 1 + 1?", 
    "1) quanto é 1 + 1?",
-  v "1) quanto é 1 + 1?",
+  "1) quanto é 1 + 1?",
    "1) quanto é 1 + 1?",
    "1) quanto é 1 + 1?",
    "1) quanto é 1 + 1?",
