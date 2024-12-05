@@ -1,6 +1,6 @@
 // Array de perguntas para as cartas
 const perguntas = [
-  "1) Como a experiência da guerra moldou a visão de mundo dos artistas e escritores da época?",
+  "1) quanto é 1 + 1?",
 "2) Quais foram os principais temas abordados na literatura e nas artes visuais durante e após a guerra?",
 "3) De que forma o horror e a violência da guerra se manifestaram nas obras de arte?",
 "4) Como o movimento expressionista e o surrealismo refletiram os traumas e angústias da época?",
