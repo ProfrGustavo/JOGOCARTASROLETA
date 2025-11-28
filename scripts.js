@@ -36,7 +36,7 @@ const perguntas = [
    "1) quanto é 1 + 1?",
    "1) quanto é 1 + 1?",
    "1) quanto é 1 + 1?",
-   "1) quanto é 1 + 1?",
+   "1) quanto é 30+47",
   
     // Adicione mais perguntas conforme necessário
 ];
