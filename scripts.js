@@ -34,7 +34,7 @@ const perguntas = [
     {
         pergunta: 'Volume de um cilindro com raio 2 e altura 5 (π=3):',
         opcoes: ['60', '30', '120', '90'],
-        correta: 0  // 3*4*5 = 60
+        correta: 0
     },
     // 7
     {
@@ -52,13 +52,13 @@ const perguntas = [
     {
         pergunta: 'Área de um círculo de raio 4 (π=3):',
         opcoes: ['48', '24', '36', '12'],
-        correta: 0  // 3*16 = 48
+        correta: 0
     },
     // 10
     {
         pergunta: 'Qual a diagonal de um quadrado de lado 4? (use √2 ≈ 1,4)',
         opcoes: ['5,6', '8', '4', '16'],
-        correta: 0  // 4*1,4 = 5,6
+        correta: 0
     },
     // 11
     {
@@ -70,7 +70,7 @@ const perguntas = [
     {
         pergunta: 'Volume de uma pirâmide de base quadrada (lado 3, altura 4):',
         opcoes: ['12', '36', '9', '48'],
-        correta: 0  // (1/3)*9*4 = 12
+        correta: 0
     },
     // 13
     {
@@ -82,13 +82,13 @@ const perguntas = [
     {
         pergunta: 'Volume de uma esfera de raio 3 (π=3):',
         opcoes: ['108', '36', '72', '54'],
-        correta: 0  // (4/3)*3*27 = 108
+        correta: 0
     },
     // 15
     {
         pergunta: 'Área de um triângulo de base 6 e altura 5:',
         opcoes: ['15', '30', '11', '20'],
-        correta: 0  // (6*5)/2 = 15
+        correta: 0
     },
     // 16
     {
@@ -106,13 +106,13 @@ const perguntas = [
     {
         pergunta: 'Volume de um cone com raio 2 e altura 6 (π=3):',
         opcoes: ['24', '12', '48', '36'],
-        correta: 0  // (1/3)*3*4*6 = 24
+        correta: 0
     },
     // 19
     {
         pergunta: 'Qual a área de um losango com diagonais 8 e 6?',
         opcoes: ['24', '48', '14', '28'],
-        correta: 0  // (8*6)/2 = 24
+        correta: 0
     },
     // 20
     {
@@ -130,7 +130,7 @@ const perguntas = [
     {
         pergunta: 'Área de um trapézio de bases 5 e 7, altura 4:',
         opcoes: ['24', '12', '48', '28'],
-        correta: 0  // (5+7)*4/2 = 24
+        correta: 0
     },
     // 23
     {
@@ -148,7 +148,7 @@ const perguntas = [
     {
         pergunta: 'Volume de um prisma de base triangular (área base=8, altura=5):',
         opcoes: ['40', '20', '80', '13'],
-        correta: 0  // 8*5 = 40
+        correta: 0
     },
     // 26
     {
@@ -166,25 +166,25 @@ const perguntas = [
     {
         pergunta: 'Volume de um cilindro com raio 3 e altura 4 (π=3):',
         opcoes: ['108', '36', '72', '54'],
-        correta: 0  // 3*9*4 = 108
+        correta: 0
     },
     // 29
     {
         pergunta: 'Qual a medida da diagonal de um cubo de aresta 3? (use √3≈1,7)',
         opcoes: ['5,1', '9', '3', '6'],
-        correta: 0  // 3*1,7 = 5,1
+        correta: 0
     },
     // 30
     {
         pergunta: 'Área de um círculo de raio 5 (π=3):',
         opcoes: ['75', '30', '15', '50'],
-        correta: 0  // 3*25 = 75
+        correta: 0
     },
     // 31
     {
         pergunta: 'Volume de uma pirâmide de base retangular (área=12, altura=6):',
         opcoes: ['24', '72', '36', '48'],
-        correta: 0  // (1/3)*12*6 = 24
+        correta: 0
     },
     // 32
     {
@@ -202,7 +202,7 @@ const perguntas = [
     {
         pergunta: 'Volume de uma esfera de raio 2 (π=3):',
         opcoes: ['32', '16', '24', '48'],
-        correta: 0  // (4/3)*3*8 = 32
+        correta: 0
     },
     // 35
     {
@@ -214,7 +214,7 @@ const perguntas = [
     {
         pergunta: 'Volume de um cone com raio 3 e altura 5 (π=3):',
         opcoes: ['45', '15', '30', '60'],
-        correta: 0  // (1/3)*3*9*5 = 45
+        correta: 0
     },
     // 37
     {
@@ -226,13 +226,13 @@ const perguntas = [
     {
         pergunta: 'Perímetro de um retângulo de lados 4 e 6:',
         opcoes: ['20', '24', '10', '48'],
-        correta: 0  // 2*(4+6)=20
+        correta: 0
     },
     // 39
     {
         pergunta: 'Área de um triângulo equilátero de lado 4 (use √3≈1,7):',
         opcoes: ['6,8', '16', '8', '12'],
-        correta: 0  // (l²√3)/4 = 16*1,7/4=6,8
+        correta: 0
     },
     // 40
     {
@@ -250,25 +250,25 @@ const perguntas = [
     {
         pergunta: 'Quantas faces tem uma pirâmide de base quadrada?',
         opcoes: ['5', '4', '6', '8'],
-        correta: 0  // 1 base + 4 laterais
+        correta: 0
     },
     // 43
     {
         pergunta: 'Área de um losango com diagonais 10 e 6:',
         opcoes: ['30', '60', '16', '20'],
-        correta: 0  // (10*6)/2=30
+        correta: 0
     },
     // 44
     {
         pergunta: 'Volume de um cilindro com diâmetro 4 e altura 6 (π=3):',
         opcoes: ['72', '24', '144', '36'],
-        correta: 0  // raio=2, 3*4*6=72
+        correta: 0
     },
     // 45
     {
         pergunta: 'Qual a área de um trapézio de bases 4 e 8, altura 3?',
         opcoes: ['18', '12', '24', '36'],
-        correta: 0  // (4+8)*3/2=18
+        correta: 0
     },
     // 46
     {
@@ -280,25 +280,25 @@ const perguntas = [
     {
         pergunta: 'Volume de uma esfera de raio 4 (π=3):',
         opcoes: ['256', '64', '128', '192'],
-        correta: 0  // (4/3)*3*64 = 256
+        correta: 0
     },
     // 48
     {
         pergunta: 'Área de um círculo com diâmetro 6 (π=3):',
         opcoes: ['27', '54', '18', '36'],
-        correta: 0  // raio=3, 3*9=27
+        correta: 0
     },
     // 49
     {
         pergunta: 'Quantas arestas tem uma pirâmide de base triangular?',
         opcoes: ['6', '8', '4', '9'],
-        correta: 0  // 3 da base + 3 laterais = 6
+        correta: 0
     },
     // 50
     {
         pergunta: 'Volume de um prisma de base quadrada (lado 3, altura 5):',
         opcoes: ['45', '15', '75', '30'],
-        correta: 0  // 9*5 = 45
+        correta: 0
     }
 ];
 
@@ -353,6 +353,15 @@ function resetarTimerDisplay() {
     if (timerEl) timerEl.textContent = '⏱️ 00:00';
 }
 
+// ===== FUNÇÃO PARA EMBARALHAR ARRAY =====
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 // ===== GERAR 50 CARTAS =====
 for (let i = 0; i < 50; i++) {
     const card = document.createElement('div');
@@ -369,7 +378,15 @@ function abrirPergunta(index, cardElement) {
     currentCardIndex = index;
     const perguntaObj = perguntas[index % perguntas.length];
 
-    // Monta o conteúdo com timer e placar
+    // Cria uma cópia das opções e índices, e embaralha
+    const opcoesComIndices = perguntaObj.opcoes.map((texto, idx) => ({ texto, idx }));
+    const embaralhadas = shuffleArray([...opcoesComIndices]);
+    // Nova lista de textos na ordem embaralhada
+    const opcoesEmbaralhadas = embaralhadas.map(item => item.texto);
+    // Novo índice correto: posição onde está o item que tinha o índice original correto
+    const novoIndiceCorreto = embaralhadas.findIndex(item => item.idx === perguntaObj.correta);
+
+    // Monta o HTML com as opções embaralhadas
     let html = `
         <div class="question-text">${perguntaObj.pergunta}</div>
         <div class="score-display">
@@ -379,9 +396,9 @@ function abrirPergunta(index, cardElement) {
         <div class="options-grid" id="optionsGrid">
     `;
     const letras = ['A', 'B', 'C', 'D'];
-    perguntaObj.opcoes.forEach((opcao, i) => {
+    opcoesEmbaralhadas.forEach((opcao, i) => {
         html += `
-            <button class="option-btn" data-optindex="${i}">
+            <button class="option-btn" data-optindex="${i}" data-original-correct="${novoIndiceCorreto}">
                 <span class="letter">${letras[i]}</span> ${opcao}
             </button>
         `;
@@ -392,6 +409,9 @@ function abrirPergunta(index, cardElement) {
     `;
     questionContent.innerHTML = html;
 
+    // Armazena o índice correto embaralhado no escopo para uso na resposta
+    window._indiceCorretoAtual = novoIndiceCorreto;
+
     // Inicia cronômetro
     iniciarCronometro();
 
@@ -400,7 +420,7 @@ function abrirPergunta(index, cardElement) {
         btn.addEventListener('click', (e) => {
             if (isAnswered) return;
             const optIndex = parseInt(btn.dataset.optindex);
-            responderPergunta(optIndex, perguntaObj, cardElement);
+            responderPergunta(optIndex, perguntaObj, cardElement, window._indiceCorretoAtual);
         });
     });
 
@@ -409,11 +429,10 @@ function abrirPergunta(index, cardElement) {
 }
 
 // ===== FUNÇÃO PARA RESPONDER =====
-function responderPergunta(optIndex, perguntaObj, cardElement) {
+function responderPergunta(optIndex, perguntaObj, cardElement, indiceCorretoEmbaralhado) {
     if (isAnswered) return;
     isAnswered = true;
 
-    // Para o cronômetro
     pararCronometro();
 
     const allBtns = document.querySelectorAll('.option-btn');
@@ -422,20 +441,22 @@ function responderPergunta(optIndex, perguntaObj, cardElement) {
 
     allBtns.forEach(btn => btn.classList.add('disabled'));
 
-    const acertou = (optIndex === perguntaObj.correta);
+    const acertou = (optIndex === indiceCorretoEmbaralhado);
     if (acertou) {
         score++;
         scoreSpan.textContent = score;
         feedbackMsg.textContent = '✅ Resposta correta!';
         feedbackMsg.className = 'feedback-msg show correct';
     } else {
-        const correta = perguntaObj.opcoes[perguntaObj.correta];
-        feedbackMsg.textContent = '❌ Resposta incorreta. A correta era: ' + correta;
+        // Encontra a letra da opção correta
+        const letras = ['A', 'B', 'C', 'D'];
+        const letraCorreta = letras[indiceCorretoEmbaralhado];
+        feedbackMsg.textContent = `❌ Resposta incorreta. A correta era a letra ${letraCorreta}.`;
         feedbackMsg.className = 'feedback-msg show wrong';
     }
 
     allBtns.forEach((btn, idx) => {
-        if (idx === perguntaObj.correta) {
+        if (idx === indiceCorretoEmbaralhado) {
             btn.classList.add('correct');
         } else if (idx === optIndex && !acertou) {
             btn.classList.add('wrong');
@@ -465,7 +486,6 @@ expandedQuestion.addEventListener('click', (e) => {
 });
 
 // ===== AJUDA INICIAL =====
-// Verifica se o usuário já viu a ajuda (usando localStorage)
 if (localStorage.getItem('quizHelpShown') === 'true') {
     helpOverlay.classList.add('hidden');
 } else {
@@ -477,7 +497,6 @@ closeHelpBtn.addEventListener('click', () => {
     localStorage.setItem('quizHelpShown', 'true');
 });
 
-// Botão de ajuda fixo (reabre o overlay)
 helpBtn.addEventListener('click', () => {
     helpOverlay.classList.remove('hidden');
 });
