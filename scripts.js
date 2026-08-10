@@ -1,31 +1,305 @@
-// ===== PERGUNTAS DE GEOMETRIA =====
+// ===== 50 PERGUNTAS DE GEOMETRIA (FÁCEIS, CONCEITUAIS, π = 3) =====
 const perguntas = [
+    // 1
     {
-        pergunta: 'Em um cone com raio = 5 e altura = 10, o volume é: (use π ≈ 3,14)',
-        opcoes: ['50', '150', '200', '300'],
-        correta: 1 // 150
-    },
-    {
-        pergunta: 'Qual a área de um círculo de raio 7? (use π ≈ 3,14)',
-        opcoes: ['153,86', '43,96', '113,04', '78,50'],
+        pergunta: 'Qual é a fórmula do volume do cubo?',
+        opcoes: ['lado³', 'lado²', '6·lado²', 'lado·altura·largura'],
         correta: 0
     },
+    // 2
     {
-        pergunta: 'O volume de uma esfera de raio 3 é aproximadamente: (use π ≈ 3,14)',
-        opcoes: ['113,04', '84,78', '36,00', '28,26'],
+        pergunta: 'Volume de um paralelepípedo de dimensões 2, 3 e 4 é:',
+        opcoes: ['24', '12', '48', '36'],
         correta: 0
     },
+    // 3
     {
-        pergunta: 'Um cilindro tem raio 4 e altura 6. Seu volume é: (use π ≈ 3,14)',
-        opcoes: ['301,44', '200,96', '150,72', '100,48'],
+        pergunta: 'Qual a área de um quadrado de lado 5?',
+        opcoes: ['25', '20', '10', '15'],
         correta: 0
     },
+    // 4
     {
-        pergunta: 'Qual a diagonal de um quadrado de lado 5? (use √2 ≈ 1,41)',
-        opcoes: ['7,05', '10,00', '6,25', '5,00'],
+        pergunta: 'Quantas faces tem um cubo?',
+        opcoes: ['6', '8', '4', '12'],
         correta: 0
     },
-    // Você pode adicionar mais perguntas aqui para ter variedade
+    // 5
+    {
+        pergunta: 'Fórmula do volume do cilindro (use π = 3):',
+        opcoes: ['π·r²·h', '2·π·r·h', 'π·r·h', 'π·r²'],
+        correta: 0
+    },
+    // 6
+    {
+        pergunta: 'Volume de um cilindro com raio 2 e altura 5 (π=3):',
+        opcoes: ['60', '30', '120', '90'],
+        correta: 0  // 3*4*5 = 60
+    },
+    // 7
+    {
+        pergunta: 'Área de um retângulo de base 8 e altura 3:',
+        opcoes: ['24', '11', '16', '48'],
+        correta: 0
+    },
+    // 8
+    {
+        pergunta: 'Fórmula da área do círculo (use π = 3):',
+        opcoes: ['π·r²', '2·π·r', 'π·r', 'π·d'],
+        correta: 0
+    },
+    // 9
+    {
+        pergunta: 'Área de um círculo de raio 4 (π=3):',
+        opcoes: ['48', '24', '36', '12'],
+        correta: 0  // 3*16 = 48
+    },
+    // 10
+    {
+        pergunta: 'Qual a diagonal de um quadrado de lado 4? (use √2 ≈ 1,4)',
+        opcoes: ['5,6', '8', '4', '16'],
+        correta: 0  // 4*1,4 = 5,6
+    },
+    // 11
+    {
+        pergunta: 'Teorema de Pitágoras: qual a relação correta?',
+        opcoes: ['a² = b² + c²', 'a = b + c', 'a² = b² - c²', 'a = b·c'],
+        correta: 0
+    },
+    // 12
+    {
+        pergunta: 'Volume de uma pirâmide de base quadrada (lado 3, altura 4):',
+        opcoes: ['12', '36', '9', '48'],
+        correta: 0  // (1/3)*9*4 = 12
+    },
+    // 13
+    {
+        pergunta: 'Fórmula do volume da esfera (use π=3):',
+        opcoes: ['(4/3)·π·r³', '4·π·r²', '(4/3)·π·r²', 'π·r³'],
+        correta: 0
+    },
+    // 14
+    {
+        pergunta: 'Volume de uma esfera de raio 3 (π=3):',
+        opcoes: ['108', '36', '72', '54'],
+        correta: 0  // (4/3)*3*27 = 108
+    },
+    // 15
+    {
+        pergunta: 'Área de um triângulo de base 6 e altura 5:',
+        opcoes: ['15', '30', '11', '20'],
+        correta: 0  // (6*5)/2 = 15
+    },
+    // 16
+    {
+        pergunta: 'Qual é o volume de um cubo de aresta 3?',
+        opcoes: ['27', '9', '81', '18'],
+        correta: 0
+    },
+    // 17
+    {
+        pergunta: 'Fórmula do volume do cone (use π=3):',
+        opcoes: ['(1/3)·π·r²·h', 'π·r²·h', '(1/3)·π·r·h', 'π·r·h'],
+        correta: 0
+    },
+    // 18
+    {
+        pergunta: 'Volume de um cone com raio 2 e altura 6 (π=3):',
+        opcoes: ['24', '12', '48', '36'],
+        correta: 0  // (1/3)*3*4*6 = 24
+    },
+    // 19
+    {
+        pergunta: 'Qual a área de um losango com diagonais 8 e 6?',
+        opcoes: ['24', '48', '14', '28'],
+        correta: 0  // (8*6)/2 = 24
+    },
+    // 20
+    {
+        pergunta: 'Quantas arestas tem um cubo?',
+        opcoes: ['12', '8', '6', '4'],
+        correta: 0
+    },
+    // 21
+    {
+        pergunta: 'Perímetro de um quadrado de lado 7:',
+        opcoes: ['28', '14', '49', '21'],
+        correta: 0
+    },
+    // 22
+    {
+        pergunta: 'Área de um trapézio de bases 5 e 7, altura 4:',
+        opcoes: ['24', '12', '48', '28'],
+        correta: 0  // (5+7)*4/2 = 24
+    },
+    // 23
+    {
+        pergunta: 'Volume de um paralelepípedo de dimensões 2, 2 e 5:',
+        opcoes: ['20', '10', '40', '30'],
+        correta: 0
+    },
+    // 24
+    {
+        pergunta: 'Qual fórmula dá a área da superfície de um cubo?',
+        opcoes: ['6·l²', 'l³', '4·l²', '2·l²'],
+        correta: 0
+    },
+    // 25
+    {
+        pergunta: 'Volume de um prisma de base triangular (área base=8, altura=5):',
+        opcoes: ['40', '20', '80', '13'],
+        correta: 0  // 8*5 = 40
+    },
+    // 26
+    {
+        pergunta: 'Fórmula da área do triângulo:',
+        opcoes: ['(base·altura)/2', 'base·altura', 'base+altura', '(base²·altura)'],
+        correta: 0
+    },
+    // 27
+    {
+        pergunta: 'Área de um quadrado de lado 10 é:',
+        opcoes: ['100', '40', '20', '50'],
+        correta: 0
+    },
+    // 28
+    {
+        pergunta: 'Volume de um cilindro com raio 3 e altura 4 (π=3):',
+        opcoes: ['108', '36', '72', '54'],
+        correta: 0  // 3*9*4 = 108
+    },
+    // 29
+    {
+        pergunta: 'Qual a medida da diagonal de um cubo de aresta 3? (use √3≈1,7)',
+        opcoes: ['5,1', '9', '3', '6'],
+        correta: 0  // 3*1,7 = 5,1
+    },
+    // 30
+    {
+        pergunta: 'Área de um círculo de raio 5 (π=3):',
+        opcoes: ['75', '30', '15', '50'],
+        correta: 0  // 3*25 = 75
+    },
+    // 31
+    {
+        pergunta: 'Volume de uma pirâmide de base retangular (área=12, altura=6):',
+        opcoes: ['24', '72', '36', '48'],
+        correta: 0  // (1/3)*12*6 = 24
+    },
+    // 32
+    {
+        pergunta: 'Quantos vértices tem um cubo?',
+        opcoes: ['8', '12', '6', '4'],
+        correta: 0
+    },
+    // 33
+    {
+        pergunta: 'Fórmula da área do retângulo:',
+        opcoes: ['base·altura', '2·(base+altura)', 'base+altura', 'base²'],
+        correta: 0
+    },
+    // 34
+    {
+        pergunta: 'Volume de uma esfera de raio 2 (π=3):',
+        opcoes: ['32', '16', '24', '48'],
+        correta: 0  // (4/3)*3*8 = 32
+    },
+    // 35
+    {
+        pergunta: 'Área de um paralelogramo de base 7 e altura 4:',
+        opcoes: ['28', '11', '14', '21'],
+        correta: 0
+    },
+    // 36
+    {
+        pergunta: 'Volume de um cone com raio 3 e altura 5 (π=3):',
+        opcoes: ['45', '15', '30', '60'],
+        correta: 0  // (1/3)*3*9*5 = 45
+    },
+    // 37
+    {
+        pergunta: 'Qual é a fórmula da diagonal de um quadrado (lado L)?',
+        opcoes: ['L·√2', '2·L', 'L²', 'L·√3'],
+        correta: 0
+    },
+    // 38
+    {
+        pergunta: 'Perímetro de um retângulo de lados 4 e 6:',
+        opcoes: ['20', '24', '10', '48'],
+        correta: 0  // 2*(4+6)=20
+    },
+    // 39
+    {
+        pergunta: 'Área de um triângulo equilátero de lado 4 (use √3≈1,7):',
+        opcoes: ['6,8', '16', '8', '12'],
+        correta: 0  // (l²√3)/4 = 16*1,7/4=6,8
+    },
+    // 40
+    {
+        pergunta: 'Volume de um cubo de aresta 4:',
+        opcoes: ['64', '16', '256', '48'],
+        correta: 0
+    },
+    // 41
+    {
+        pergunta: 'Fórmula do volume do prisma:',
+        opcoes: ['Área da base · altura', 'Comprimento · largura', '2·(base+altura)', 'base²·altura'],
+        correta: 0
+    },
+    // 42
+    {
+        pergunta: 'Quantas faces tem uma pirâmide de base quadrada?',
+        opcoes: ['5', '4', '6', '8'],
+        correta: 0  // 1 base + 4 laterais
+    },
+    // 43
+    {
+        pergunta: 'Área de um losango com diagonais 10 e 6:',
+        opcoes: ['30', '60', '16', '20'],
+        correta: 0  // (10*6)/2=30
+    },
+    // 44
+    {
+        pergunta: 'Volume de um cilindro com diâmetro 4 e altura 6 (π=3):',
+        opcoes: ['72', '24', '144', '36'],
+        correta: 0  // raio=2, 3*4*6=72
+    },
+    // 45
+    {
+        pergunta: 'Qual a área de um trapézio de bases 4 e 8, altura 3?',
+        opcoes: ['18', '12', '24', '36'],
+        correta: 0  // (4+8)*3/2=18
+    },
+    // 46
+    {
+        pergunta: 'Fórmula da área do quadrado:',
+        opcoes: ['lado²', '4·lado', '2·lado', 'lado³'],
+        correta: 0
+    },
+    // 47
+    {
+        pergunta: 'Volume de uma esfera de raio 4 (π=3):',
+        opcoes: ['256', '64', '128', '192'],
+        correta: 0  // (4/3)*3*64 = 256
+    },
+    // 48
+    {
+        pergunta: 'Área de um círculo com diâmetro 6 (π=3):',
+        opcoes: ['27', '54', '18', '36'],
+        correta: 0  // raio=3, 3*9=27
+    },
+    // 49
+    {
+        pergunta: 'Quantas arestas tem uma pirâmide de base triangular?',
+        opcoes: ['6', '8', '4', '9'],
+        correta: 0  // 3 da base + 3 laterais = 6
+    },
+    // 50
+    {
+        pergunta: 'Volume de um prisma de base quadrada (lado 3, altura 5):',
+        opcoes: ['45', '15', '75', '30'],
+        correta: 0  // 9*5 = 45
+    }
 ];
 
 // ===== ELEMENTOS DOM =====
@@ -34,9 +308,9 @@ const expandedQuestion = document.getElementById('expanded-question');
 const questionContent = document.getElementById('question-content');
 const closeModalBtn = document.getElementById('close-modal');
 
-let currentCardIndex = null;      // índice da carta clicada
-let isAnswered = false;          // controla se já respondeu à pergunta atual
-let score = 0;                   // contador de acertos
+let currentCardIndex = null;
+let isAnswered = false;
+let score = 0;
 
 // ===== GERAR 50 CARTAS =====
 for (let i = 0; i < 50; i++) {
@@ -48,16 +322,12 @@ for (let i = 0; i < 50; i++) {
     cardsContainer.appendChild(card);
 }
 
-// ===== FUNÇÃO PARA ABRIR MODAL COM PERGUNTA =====
+// ===== FUNÇÃO PARA ABRIR MODAL =====
 function abrirPergunta(index, cardElement) {
-    // Se a carta já estiver oculta (já respondida), não faz nada
     if (cardElement.classList.contains('hidden-card')) return;
-
-    // Guarda referência da carta atual
     currentCardIndex = index;
-    const perguntaObj = perguntas[index % perguntas.length]; // ciclo
+    const perguntaObj = perguntas[index % perguntas.length];
 
-    // Monta o conteúdo do modal
     let html = `
         <div class="question-text">${perguntaObj.pergunta}</div>
         <div class="score-display">🏆 Acertos: <span id="scoreDisplay">${score}</span></div>
@@ -77,22 +347,19 @@ function abrirPergunta(index, cardElement) {
     `;
     questionContent.innerHTML = html;
 
-    // Adiciona evento de clique nas opções
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            if (isAnswered) return; // já respondeu
+            if (isAnswered) return;
             const optIndex = parseInt(btn.dataset.optindex);
             responderPergunta(optIndex, perguntaObj, cardElement);
         });
     });
 
-    // Reseta estado
     isAnswered = false;
-    // Mostra modal
     expandedQuestion.classList.add('show');
 }
 
-// ===== FUNÇÃO PARA PROCESSAR RESPOSTA =====
+// ===== FUNÇÃO PARA RESPONDER =====
 function responderPergunta(optIndex, perguntaObj, cardElement) {
     if (isAnswered) return;
     isAnswered = true;
@@ -101,10 +368,8 @@ function responderPergunta(optIndex, perguntaObj, cardElement) {
     const feedbackMsg = document.getElementById('feedbackMsg');
     const scoreSpan = document.getElementById('scoreDisplay');
 
-    // Desabilita todos os botões
     allBtns.forEach(btn => btn.classList.add('disabled'));
 
-    // Verifica se acertou
     const acertou = (optIndex === perguntaObj.correta);
     if (acertou) {
         score++;
@@ -112,11 +377,11 @@ function responderPergunta(optIndex, perguntaObj, cardElement) {
         feedbackMsg.textContent = '✅ Resposta correta!';
         feedbackMsg.className = 'feedback-msg show correct';
     } else {
-        feedbackMsg.textContent = '❌ Resposta incorreta. A correta era: ' + perguntaObj.opcoes[perguntaObj.correta];
+        const correta = perguntaObj.opcoes[perguntaObj.correta];
+        feedbackMsg.textContent = '❌ Resposta incorreta. A correta era: ' + correta;
         feedbackMsg.className = 'feedback-msg show wrong';
     }
 
-    // Marca visualmente os botões (correto e errado)
     allBtns.forEach((btn, idx) => {
         if (idx === perguntaObj.correta) {
             btn.classList.add('correct');
@@ -125,35 +390,21 @@ function responderPergunta(optIndex, perguntaObj, cardElement) {
         }
     });
 
-    // Oculta a carta (removendo-a da vista) – mantendo a função original
     cardElement.classList.add('hidden-card');
-    cardElement.classList.remove('flipped'); // para garantir
-
-    // Após 2 segundos, fecha o modal automaticamente (ou pode deixar o usuário fechar)
-    // Mas mantemos o botão de fechar.
+    cardElement.classList.remove('flipped');
 }
 
 // ===== FECHAR MODAL =====
 function fecharModal() {
     expandedQuestion.classList.remove('show');
-    // Limpa conteúdo para evitar conflitos
     questionContent.innerHTML = '';
     isAnswered = false;
 }
 
-// Evento do botão fechar
 closeModalBtn.addEventListener('click', fecharModal);
-
-// Fechar com tecla ESC
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-        fecharModal();
-    }
+    if (event.key === 'Escape') fecharModal();
 });
-
-// Fechar ao clicar no fundo (overlay) – opcional
 expandedQuestion.addEventListener('click', (e) => {
-    if (e.target === expandedQuestion) {
-        fecharModal();
-    }
+    if (e.target === expandedQuestion) fecharModal();
 });
