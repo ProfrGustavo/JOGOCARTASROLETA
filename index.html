@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades Interativas</title>
+    <title>Quiz de Geometria + Roleta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Box Esquerda com o iFrame -->
+        <!-- Box Esquerda: iFrame (roleta) -->
         <div class="iframe-box">
             <iframe src="https://wordwall.net/pt/embed/1897478091234a0c80249048cbb8b12d?themeId=58&templateId=8&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe>
         </div>
         
-        <!-- Box Direita com Cartas -->
+        <!-- Box Direita: Cards -->
         <div class="cards-container" id="cards-container">
-            <!-- 50 Cartas geradas automaticamente com JavaScript -->
+            <!-- As 50 cartas serão geradas via JS -->
         </div>
     </div>
 
-    <!-- Div de Pergunta Expandida -->
+    <!-- Modal de Pergunta Expandida -->
     <div class="expanded-question" id="expanded-question">
-        <div class="question-content" id="question-content"></div>
+        <div class="question-content" id="question-content">
+            <!-- Conteúdo dinâmico -->
+        </div>
+        <button class="close-modal" id="close-modal">✕</button>
     </div>
 
     <script src="scripts.js"></script>
