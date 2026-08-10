@@ -307,10 +307,51 @@ const cardsContainer = document.getElementById('cards-container');
 const expandedQuestion = document.getElementById('expanded-question');
 const questionContent = document.getElementById('question-content');
 const closeModalBtn = document.getElementById('close-modal');
+const helpOverlay = document.getElementById('helpOverlay');
+const closeHelpBtn = document.getElementById('closeHelp');
+const helpBtn = document.getElementById('helpBtn');
 
 let currentCardIndex = null;
 let isAnswered = false;
 let score = 0;
+
+// ===== CRONÔMETRO =====
+let timerInterval = null;
+let seconds = 0;
+let timerRunning = false;
+
+function iniciarCronometro() {
+    if (timerRunning) return;
+    seconds = 0;
+    atualizarDisplayTimer();
+    timerRunning = true;
+    timerInterval = setInterval(() => {
+        seconds++;
+        atualizarDisplayTimer();
+    }, 1000);
+}
+
+function pararCronometro() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+    timerRunning = false;
+}
+
+function atualizarDisplayTimer() {
+    const timerEl = document.getElementById('timerDisplay');
+    if (timerEl) {
+        const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
+        const secs = String(seconds % 60).padStart(2, '0');
+        timerEl.textContent = `⏱️ ${mins}:${secs}`;
+    }
+}
+
+function resetarTimerDisplay() {
+    const timerEl = document.getElementById('timerDisplay');
+    if (timerEl) timerEl.textContent = '⏱️ 00:00';
+}
 
 // ===== GERAR 50 CARTAS =====
 for (let i = 0; i < 50; i++) {
@@ -328,9 +369,13 @@ function abrirPergunta(index, cardElement) {
     currentCardIndex = index;
     const perguntaObj = perguntas[index % perguntas.length];
 
+    // Monta o conteúdo com timer e placar
     let html = `
         <div class="question-text">${perguntaObj.pergunta}</div>
-        <div class="score-display">🏆 Acertos: <span id="scoreDisplay">${score}</span></div>
+        <div class="score-display">
+            <span>🏆 Acertos: <span id="scoreDisplay">${score}</span></span>
+            <span class="timer-display" id="timerDisplay">⏱️ 00:00</span>
+        </div>
         <div class="options-grid" id="optionsGrid">
     `;
     const letras = ['A', 'B', 'C', 'D'];
@@ -347,6 +392,10 @@ function abrirPergunta(index, cardElement) {
     `;
     questionContent.innerHTML = html;
 
+    // Inicia cronômetro
+    iniciarCronometro();
+
+    // Eventos das opções
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             if (isAnswered) return;
@@ -363,6 +412,9 @@ function abrirPergunta(index, cardElement) {
 function responderPergunta(optIndex, perguntaObj, cardElement) {
     if (isAnswered) return;
     isAnswered = true;
+
+    // Para o cronômetro
+    pararCronometro();
 
     const allBtns = document.querySelectorAll('.option-btn');
     const feedbackMsg = document.getElementById('feedbackMsg');
@@ -396,15 +448,36 @@ function responderPergunta(optIndex, perguntaObj, cardElement) {
 
 // ===== FECHAR MODAL =====
 function fecharModal() {
+    pararCronometro();
+    resetarTimerDisplay();
     expandedQuestion.classList.remove('show');
     questionContent.innerHTML = '';
     isAnswered = false;
 }
 
+// ===== EVENTOS =====
 closeModalBtn.addEventListener('click', fecharModal);
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') fecharModal();
 });
 expandedQuestion.addEventListener('click', (e) => {
     if (e.target === expandedQuestion) fecharModal();
+});
+
+// ===== AJUDA INICIAL =====
+// Verifica se o usuário já viu a ajuda (usando localStorage)
+if (localStorage.getItem('quizHelpShown') === 'true') {
+    helpOverlay.classList.add('hidden');
+} else {
+    helpOverlay.classList.remove('hidden');
+}
+
+closeHelpBtn.addEventListener('click', () => {
+    helpOverlay.classList.add('hidden');
+    localStorage.setItem('quizHelpShown', 'true');
+});
+
+// Botão de ajuda fixo (reabre o overlay)
+helpBtn.addEventListener('click', () => {
+    helpOverlay.classList.remove('hidden');
 });

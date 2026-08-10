@@ -106,7 +106,7 @@ body {
 }
 
 .card.hidden-card {
-    display: none; /* mantido para ocultar após resposta */
+    display: none;
 }
 
 /* ===== Modal ===== */
@@ -241,14 +241,25 @@ body {
     pointer-events: none;
 }
 
+/* ===== Placar e Cronômetro ===== */
 .score-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 18px;
     font-weight: 600;
     color: #2d7a9b;
     margin-bottom: 16px;
-    text-align: right;
     border-bottom: 1px solid #e2ecf5;
     padding-bottom: 10px;
+}
+
+.timer-display {
+    background: #eaf0f6;
+    padding: 4px 14px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #1a3b4f;
 }
 
 .feedback-msg {
@@ -271,6 +282,96 @@ body {
 .feedback-msg.wrong {
     background: #fde8e8;
     color: #8f2a2a;
+}
+
+/* ===== Botão de ajuda fixo ===== */
+.help-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #1a5f7a;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(26, 95, 122, 0.3);
+    transition: transform 0.2s;
+    z-index: 999;
+}
+.help-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Overlay de ajuda inicial ===== */
+.help-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    transition: opacity 0.4s;
+}
+
+.help-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.help-box {
+    background: white;
+    max-width: 500px;
+    width: 90%;
+    padding: 36px 28px;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.help-box h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+.help-box p {
+    font-size: 18px;
+    margin: 6px 0;
+    color: #1a3b4f;
+}
+.help-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+.help-box ul li {
+    font-size: 17px;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+.help-box ul li:last-child {
+    border-bottom: none;
+}
+.help-box button {
+    width: 100%;
+    padding: 14px;
+    background: #1a5f7a;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+.help-box button:hover {
+    background: #0f4a61;
 }
 
 /* ===== Responsividade ===== */
@@ -301,6 +402,21 @@ body {
         font-size: 18px;
         padding: 14px;
     }
+    .score-display {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .timer-display {
+        align-self: flex-start;
+    }
+    .help-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -318,5 +434,11 @@ body {
     }
     .question-text {
         font-size: 20px;
+    }
+    .help-box {
+        padding: 24px 16px;
+    }
+    .help-box h2 {
+        font-size: 22px;
     }
 }

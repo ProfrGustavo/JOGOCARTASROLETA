@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Overlay de boas-vindas / ajuda inicial -->
+    <div class="help-overlay" id="helpOverlay">
+        <div class="help-box">
+            <h2>👋 Bem-vindo ao Quiz de Geometria!</h2>
+            <p><strong>Como funciona:</strong></p>
+            <ul>
+                <li>🔢 Clique nas cartas numeradas (1 a 50).</li>
+                <li>📐 Cada carta abre uma pergunta de geometria.</li>
+                <li>⏱️ Um cronômetro começa a contar assim que você vira a carta.</li>
+                <li>✅ Escolha a alternativa correta. O cronômetro para automaticamente.</li>
+                <li>🏆 Seu placar de acertos é atualizado a cada resposta certa.</li>
+                <li>❌ Cartas respondidas somem para não repetir.</li>
+            </ul>
+            <button id="closeHelp">Entendi! Vamos começar 🚀</button>
+        </div>
+    </div>
+
     <div class="container">
         <!-- Box Esquerda: iFrame (roleta) -->
         <div class="iframe-box">
@@ -21,6 +38,9 @@
             <!-- As 50 cartas serão geradas via JS -->
         </div>
     </div>
+
+    <!-- Botão de ajuda (fixo) -->
+    <button class="help-btn" id="helpBtn" title="Ajuda">❓</button>
 
     <!-- Modal de Pergunta Expandida -->
     <div class="expanded-question" id="expanded-question">
