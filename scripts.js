@@ -1,317 +1,304 @@
-// ===== 50 PERGUNTAS DE TRIGONOMETRIA (LEI DOS SENOS, PITÁGORAS, RAZÕES) =====
+// ===== 50 PERGUNTAS DE GEOMETRIA (FÁCEIS, CONCEITUAIS, π = 3) =====
 const perguntas = [
-    // ===== TEOREMA DE PITÁGORAS =====
     // 1
     {
-        pergunta: 'Em um triângulo retângulo, os catetos medem 3 e 4. Qual é a hipotenusa?',
-        opcoes: ['5', '7', '6', '8'],
+        pergunta: 'Qual é a fórmula do volume do cubo?',
+        opcoes: ['lado³', 'lado²', '6·lado²', 'lado·altura·largura'],
         correta: 0
     },
     // 2
     {
-        pergunta: 'Um triângulo retângulo tem hipotenusa 13 e um cateto 5. Qual é o outro cateto?',
-        opcoes: ['12', '10', '8', '15'],
-        correta: 0  // 5-12-13
+        pergunta: 'Volume de um paralelepípedo de dimensões 2, 3 e 4 é:',
+        opcoes: ['24', '12', '48', '36'],
+        correta: 0
     },
     // 3
     {
-        pergunta: 'Qual das opções NÃO forma um triângulo retângulo (terno pitagórico)?',
-        opcoes: ['3-4-5', '5-12-13', '6-8-10', '4-5-6'],
-        correta: 3  // 4-5-6 não é retângulo
+        pergunta: 'Qual a área de um quadrado de lado 5?',
+        opcoes: ['25', '20', '10', '15'],
+        correta: 0
     },
     // 4
     {
-        pergunta: 'Em um triângulo retângulo, se a hipotenusa é 10 e um cateto é 6, o outro cateto é:',
-        opcoes: ['8', '4', '12', '16'],
-        correta: 0  // 6-8-10
+        pergunta: 'Quantas faces tem um cubo?',
+        opcoes: ['6', '8', '4', '12'],
+        correta: 0
     },
     // 5
     {
-        pergunta: 'O que diz o Teorema de Pitágoras?',
-        opcoes: ['a² = b² + c²', 'a = b + c', 'a² = b² - c²', 'a = b·c'],
+        pergunta: 'Fórmula do volume do cilindro (use π = 3):',
+        opcoes: ['π·r²·h', '2·π·r·h', 'π·r·h', 'π·r²'],
         correta: 0
     },
     // 6
     {
-        pergunta: 'Em um triângulo retângulo, os catetos medem 5 e 12. A hipotenusa é:',
-        opcoes: ['13', '17', '15', '10'],
-        correta: 0  // 5-12-13
+        pergunta: 'Volume de um cilindro com raio 2 e altura 5 (π=3):',
+        opcoes: ['60', '30', '120', '90'],
+        correta: 0
     },
     // 7
     {
-        pergunta: 'Qual a diagonal de um quadrado de lado 4? (use √2)',
-        opcoes: ['4√2', '8', '4', '2√2'],
-        correta: 0  // 4√2
+        pergunta: 'Área de um retângulo de base 8 e altura 3:',
+        opcoes: ['24', '11', '16', '48'],
+        correta: 0
     },
     // 8
     {
-        pergunta: 'Qual a altura de um triângulo equilátero de lado 6? (use √3)',
-        opcoes: ['3√3', '6√3', '3', '6'],
-        correta: 0  // (6√3)/2 = 3√3
+        pergunta: 'Fórmula da área do círculo (use π = 3):',
+        opcoes: ['π·r²', '2·π·r', 'π·r', 'π·d'],
+        correta: 0
     },
     // 9
     {
-        pergunta: 'Um retângulo tem lados 6 e 8. Qual a medida da diagonal?',
-        opcoes: ['10', '14', '12', '16'],
-        correta: 0  // 6-8-10
+        pergunta: 'Área de um círculo de raio 4 (π=3):',
+        opcoes: ['48', '24', '36', '12'],
+        correta: 0
     },
     // 10
     {
-        pergunta: 'Em um triângulo retângulo, se a hipotenusa mede 25 e um cateto 7, o outro cateto é:',
-        opcoes: ['24', '20', '18', '30'],
-        correta: 0  // 7-24-25
+        pergunta: 'Qual a diagonal de um quadrado de lado 4? (use √2 ≈ 1,4)',
+        opcoes: ['5,6', '8', '4', '16'],
+        correta: 0
     },
-
-    // ===== RAZÕES TRIGONOMÉTRICAS (SENO, COSSENO, TANGENTE) =====
     // 11
     {
-        pergunta: 'Em um triângulo retângulo, seno de um ângulo agudo é igual a:',
-        opcoes: ['cateto oposto / hipotenusa', 'cateto adjacente / hipotenusa', 'cateto oposto / cateto adjacente', 'hipotenusa / cateto oposto'],
+        pergunta: 'Teorema de Pitágoras: qual a relação correta?',
+        opcoes: ['a² = b² + c²', 'a = b + c', 'a² = b² - c²', 'a = b·c'],
         correta: 0
     },
     // 12
     {
-        pergunta: 'Cosseno de um ângulo agudo em um triângulo retângulo é:',
-        opcoes: ['cateto adjacente / hipotenusa', 'cateto oposto / hipotenusa', 'cateto oposto / cateto adjacente', 'hipotenusa / cateto adjacente'],
+        pergunta: 'Volume de uma pirâmide de base quadrada (lado 3, altura 4):',
+        opcoes: ['12', '36', '9', '48'],
         correta: 0
     },
     // 13
     {
-        pergunta: 'Tangente de um ângulo agudo é igual a:',
-        opcoes: ['cateto oposto / cateto adjacente', 'cateto oposto / hipotenusa', 'cateto adjacente / hipotenusa', 'hipotenusa / cateto oposto'],
+        pergunta: 'Fórmula do volume da esfera (use π=3):',
+        opcoes: ['(4/3)·π·r³', '4·π·r²', '(4/3)·π·r²', 'π·r³'],
         correta: 0
     },
     // 14
     {
-        pergunta: 'Qual o valor de sen 30°?',
-        opcoes: ['1/2', '√3/2', '√2/2', '1'],
+        pergunta: 'Volume de uma esfera de raio 3 (π=3):',
+        opcoes: ['108', '36', '72', '54'],
         correta: 0
     },
     // 15
     {
-        pergunta: 'Qual o valor de cos 60°?',
-        opcoes: ['1/2', '√3/2', '√2/2', '1'],
+        pergunta: 'Área de um triângulo de base 6 e altura 5:',
+        opcoes: ['15', '30', '11', '20'],
         correta: 0
     },
     // 16
     {
-        pergunta: 'Qual o valor de sen 45°?',
-        opcoes: ['√2/2', '1/2', '√3/2', '1'],
+        pergunta: 'Qual é o volume de um cubo de aresta 3?',
+        opcoes: ['27', '9', '81', '18'],
         correta: 0
     },
     // 17
     {
-        pergunta: 'Qual o valor de cos 45°?',
-        opcoes: ['√2/2', '1/2', '√3/2', '1'],
+        pergunta: 'Fórmula do volume do cone (use π=3):',
+        opcoes: ['(1/3)·π·r²·h', 'π·r²·h', '(1/3)·π·r·h', 'π·r·h'],
         correta: 0
     },
     // 18
     {
-        pergunta: 'Qual o valor de sen 60°?',
-        opcoes: ['√3/2', '1/2', '√2/2', '1'],
+        pergunta: 'Volume de um cone com raio 2 e altura 6 (π=3):',
+        opcoes: ['24', '12', '48', '36'],
         correta: 0
     },
     // 19
     {
-        pergunta: 'Qual o valor de tan 45°?',
-        opcoes: ['1', '0', '√3', '√2'],
+        pergunta: 'Qual a área de um losango com diagonais 8 e 6?',
+        opcoes: ['24', '48', '14', '28'],
         correta: 0
     },
     // 20
     {
-        pergunta: 'Qual o valor de tan 30°?',
-        opcoes: ['√3/3', '√3', '1', '√2/2'],
-        correta: 0  // tan 30° = 1/√3 = √3/3
+        pergunta: 'Quantas arestas tem um cubo?',
+        opcoes: ['12', '8', '6', '4'],
+        correta: 0
     },
     // 21
     {
-        pergunta: 'Em um triângulo retângulo com ângulo de 30°, qual a relação entre o cateto oposto e a hipotenusa?',
-        opcoes: ['1/2', '√3/2', '√2/2', '1'],
-        correta: 0  // sen 30° = 1/2
+        pergunta: 'Perímetro de um quadrado de lado 7:',
+        opcoes: ['28', '14', '49', '21'],
+        correta: 0
     },
     // 22
     {
-        pergunta: 'Em um triângulo retângulo com ângulo de 60°, qual a relação entre o cateto adjacente e a hipotenusa?',
-        opcoes: ['1/2', '√3/2', '√2/2', '1'],
-        correta: 0  // cos 60° = 1/2
+        pergunta: 'Área de um trapézio de bases 5 e 7, altura 4:',
+        opcoes: ['24', '12', '48', '28'],
+        correta: 0
     },
-
-    // ===== LEI DOS SENOS =====
     // 23
     {
-        pergunta: 'Qual a fórmula da Lei dos Senos?',
-        opcoes: ['a/sen A = b/sen B = c/sen C', 'a² = b² + c²', 'a = b·sen C', 'sen A = a/b'],
+        pergunta: 'Volume de um paralelepípedo de dimensões 2, 2 e 5:',
+        opcoes: ['20', '10', '40', '30'],
         correta: 0
     },
     // 24
     {
-        pergunta: 'A Lei dos Senos é usada para resolver triângulos quando:',
-        opcoes: ['temos dois ângulos e um lado', 'temos dois lados e um ângulo', 'temos três lados', 'temos três ângulos'],
+        pergunta: 'Qual fórmula dá a área da superfície de um cubo?',
+        opcoes: ['6·l²', 'l³', '4·l²', '2·l²'],
         correta: 0
     },
     // 25
     {
-        pergunta: 'Em um triângulo, se a = 10, sen A = 1/2, quanto vale a razão a/sen A?',
-        opcoes: ['20', '5', '10', '15'],
-        correta: 0  // 10 / (1/2) = 20
+        pergunta: 'Volume de um prisma de base triangular (área base=8, altura=5):',
+        opcoes: ['40', '20', '80', '13'],
+        correta: 0
     },
     // 26
     {
-        pergunta: 'Pela Lei dos Senos, em um triângulo, se b = 8 e sen B = 1/4, qual o valor da razão b/sen B?',
-        opcoes: ['32', '16', '8', '24'],
-        correta: 0  // 8 / (1/4) = 32
+        pergunta: 'Fórmula da área do triângulo:',
+        opcoes: ['(base·altura)/2', 'base·altura', 'base+altura', '(base²·altura)'],
+        correta: 0
     },
     // 27
     {
-        pergunta: 'Se em um triângulo temos a = 12, sen A = 2/3, quanto vale a razão a/sen A?',
-        opcoes: ['18', '36', '24', '12'],
-        correta: 0  // 12 / (2/3) = 18
+        pergunta: 'Área de um quadrado de lado 10 é:',
+        opcoes: ['100', '40', '20', '50'],
+        correta: 0
     },
     // 28
     {
-        pergunta: 'A Lei dos Senos é aplicável a:',
-        opcoes: ['qualquer triângulo', 'apenas triângulos retângulos', 'apenas triângulos isósceles', 'apenas triângulos equiláteros'],
+        pergunta: 'Volume de um cilindro com raio 3 e altura 4 (π=3):',
+        opcoes: ['108', '36', '72', '54'],
         correta: 0
     },
     // 29
     {
-        pergunta: 'Em um triângulo, se a/sen A = 2R, onde R é o que?',
-        opcoes: ['raio da circunferência circunscrita', 'raio da circunferência inscrita', 'altura do triângulo', 'mediana'],
+        pergunta: 'Qual a medida da diagonal de um cubo de aresta 3? (use √3≈1,7)',
+        opcoes: ['5,1', '9', '3', '6'],
         correta: 0
     },
     // 30
     {
-        pergunta: 'Se em um triângulo temos ângulo A = 30° e lado a = 8, pela Lei dos Senos, qual o valor de 2R? (sen 30° = 1/2)',
-        opcoes: ['16', '8', '4', '32'],
-        correta: 0  // 8 / (1/2) = 16
+        pergunta: 'Área de um círculo de raio 5 (π=3):',
+        opcoes: ['75', '30', '15', '50'],
+        correta: 0
     },
-
-    // ===== IDENTIFICANDO ERROS EM FÓRMULAS =====
     // 31
     {
-        pergunta: 'Qual das fórmulas abaixo está ERRADA?',
-        opcoes: ['sen²θ + cos²θ = 1', 'tg θ = sen θ / cos θ', 'sen θ = 1 / cos θ', 'cotg θ = cos θ / sen θ'],
-        correta: 2  // sen θ não é 1/cos θ (isso é secante)
+        pergunta: 'Volume de uma pirâmide de base retangular (área=12, altura=6):',
+        opcoes: ['24', '72', '36', '48'],
+        correta: 0
     },
     // 32
     {
-        pergunta: 'Qual das expressões está CORRETA para a tangente?',
-        opcoes: ['sen θ / cos θ', 'cos θ / sen θ', '1 / sen θ', '1 / cos θ'],
+        pergunta: 'Quantos vértices tem um cubo?',
+        opcoes: ['8', '12', '6', '4'],
         correta: 0
     },
     // 33
     {
-        pergunta: 'Qual das igualdades trigonométricas está ERRADA?',
-        opcoes: ['sen 30° = 1/2', 'cos 60° = 1/2', 'tg 45° = 1', 'sen 45° = √3/2'],
-        correta: 3  // sen 45° = √2/2, não √3/2
+        pergunta: 'Fórmula da área do retângulo:',
+        opcoes: ['base·altura', '2·(base+altura)', 'base+altura', 'base²'],
+        correta: 0
     },
     // 34
     {
-        pergunta: 'Qual das afirmações sobre a Lei dos Senos está ERRADA?',
-        opcoes: ['a/sen A = b/sen B', 'a/sen A = 2R', 'a = b·sen A / sen B', 'sen A / a = sen B / b'],
-        correta: 2  // a = b·sen A / sen B está ERRADO (o correto é a = b·sen A / sen B, então esta é a ERRADA)
-        // Na verdade a = b·sen A / sen B está correto. A errada seria "a = b·sen A" sem o sen B
+        pergunta: 'Volume de uma esfera de raio 2 (π=3):',
+        opcoes: ['32', '16', '24', '48'],
+        correta: 0
     },
     // 35
     {
-        pergunta: 'Qual das relações trigonométricas está ERRADA?',
-        opcoes: ['sen²θ + cos²θ = 1', '1 + tg²θ = sec²θ', '1 + cotg²θ = cossec²θ', 'sen θ = cos θ · tg θ'],
-        correta: 3  // sen θ = cos θ · tg θ está ERRADO (o correto é sen θ = cos θ · tg θ, na verdade está correto!)
-        // Vamos corrigir: sen θ = cos θ · tg θ é correto, então a errada é outra
-        // A que está realmente errada é "sen θ = 1/cos θ"
+        pergunta: 'Área de um paralelogramo de base 7 e altura 4:',
+        opcoes: ['28', '11', '14', '21'],
+        correta: 0
     },
     // 36
     {
-        pergunta: 'Qual das afirmações sobre o Teorema de Pitágoras está ERRADA?',
-        opcoes: ['a² = b² + c²', 'a é sempre o maior lado', 'a² - b² = c²', 'a = b + c'],
-        correta: 3  // a = b + c está ERRADO
+        pergunta: 'Volume de um cone com raio 3 e altura 5 (π=3):',
+        opcoes: ['45', '15', '30', '60'],
+        correta: 0
     },
     // 37
     {
-        pergunta: 'Em um triângulo retângulo, qual relação está ERRADA?',
-        opcoes: ['sen θ = cateto oposto / hipotenusa', 'cos θ = cateto adjacente / hipotenusa', 'tg θ = cateto oposto / cateto adjacente', 'tg θ = hipotenusa / cateto oposto'],
-        correta: 3  // tg θ = hipotenusa / cateto oposto está ERRADO
+        pergunta: 'Qual é a fórmula da diagonal de um quadrado (lado L)?',
+        opcoes: ['L·√2', '2·L', 'L²', 'L·√3'],
+        correta: 0
     },
     // 38
     {
-        pergunta: 'Qual das fórmulas da Lei dos Senos está ERRADA?',
-        opcoes: ['a/sen A = b/sen B', 'a = b·sen A/sen B', 'sen A/a = sen B/b', 'a = b·sen A'],
-        correta: 3  // a = b·sen A está ERRADO (falta dividir por sen B)
+        pergunta: 'Perímetro de um retângulo de lados 4 e 6:',
+        opcoes: ['20', '24', '10', '48'],
+        correta: 0
     },
-
-    // ===== APLICAÇÕES PRÁTICAS =====
     // 39
     {
-        pergunta: 'Uma escada de 10 m está apoiada em uma parede formando 60° com o chão. Qual a altura que ela atinge? (sen 60° = √3/2)',
-        opcoes: ['5√3', '10√3', '5', '10'],
-        correta: 0  // 10·sen60° = 10·√3/2 = 5√3
+        pergunta: 'Área de um triângulo equilátero de lado 4 (use √3≈1,7):',
+        opcoes: ['6,8', '16', '8', '12'],
+        correta: 0
     },
     // 40
     {
-        pergunta: 'Um poste projeta uma sombra de 12 m quando o sol está a 30°. Qual a altura do poste? (tg 30° = √3/3)',
-        opcoes: ['4√3', '12√3', '4', '12'],
-        correta: 0  // tg30° = h/12 → h = 12·√3/3 = 4√3
+        pergunta: 'Volume de um cubo de aresta 4:',
+        opcoes: ['64', '16', '256', '48'],
+        correta: 0
     },
     // 41
     {
-        pergunta: 'Em um triângulo, se A = 45°, B = 30° e a = 10, qual o valor de b? (sen 45° = √2/2, sen 30° = 1/2)',
-        opcoes: ['5√2', '10√2', '5', '10'],
-        correta: 0  // b = a·sen B/sen A = 10·(1/2)/(√2/2) = 10·1/√2 = 5√2
+        pergunta: 'Fórmula do volume do prisma:',
+        opcoes: ['Área da base · altura', 'Comprimento · largura', '2·(base+altura)', 'base²·altura'],
+        correta: 0
     },
     // 42
     {
-        pergunta: 'Qual a altura de um triângulo equilátero de lado 4? (use √3)',
-        opcoes: ['2√3', '4√3', '2', '4'],
-        correta: 0  // (4√3)/2 = 2√3
+        pergunta: 'Quantas faces tem uma pirâmide de base quadrada?',
+        opcoes: ['5', '4', '6', '8'],
+        correta: 0
     },
     // 43
     {
-        pergunta: 'Um avião sobrevoa a 2 km de altura. Sob um ângulo de 30°, qual a distância horizontal percorrida? (tg 30° = √3/3)',
-        opcoes: ['2√3', '4√3', '6', '4'],
-        correta: 0  // tg30° = 2/d → d = 2/(√3/3) = 2√3
+        pergunta: 'Área de um losango com diagonais 10 e 6:',
+        opcoes: ['30', '60', '16', '20'],
+        correta: 0
     },
     // 44
     {
-        pergunta: 'Em um triângulo retângulo, se um ângulo mede 45°, qual a relação entre os catetos?',
-        opcoes: ['iguais', 'um é o dobro do outro', 'um é a metade do outro', 'um é raiz de 3 vezes o outro'],
-        correta: 0  // ângulo de 45° → catetos iguais
+        pergunta: 'Volume de um cilindro com diâmetro 4 e altura 6 (π=3):',
+        opcoes: ['72', '24', '144', '36'],
+        correta: 0
     },
     // 45
     {
-        pergunta: 'Um terreno tem forma triangular com lados 6, 8 e 10. Esse terreno é:',
-        opcoes: ['retângulo', 'acutângulo', 'obtusângulo', 'equilátero'],
-        correta: 0  // 6-8-10 é triângulo retângulo
+        pergunta: 'Qual a área de um trapézio de bases 4 e 8, altura 3?',
+        opcoes: ['18', '12', '24', '36'],
+        correta: 0
     },
     // 46
     {
-        pergunta: 'Em uma rampa de ângulo 30° que sobe 5 m de altura, qual o comprimento da rampa? (sen 30° = 1/2)',
-        opcoes: ['10 m', '5 m', '8 m', '12 m'],
-        correta: 0  // sen30° = h/comprimento → comprimento = 5/(1/2) = 10
+        pergunta: 'Fórmula da área do quadrado:',
+        opcoes: ['lado²', '4·lado', '2·lado', 'lado³'],
+        correta: 0
     },
     // 47
     {
-        pergunta: 'A diagonal de um retângulo de lados 3 e 4 mede:',
-        opcoes: ['5', '7', '6', '8'],
-        correta: 0  // 3-4-5
+        pergunta: 'Volume de uma esfera de raio 4 (π=3):',
+        opcoes: ['256', '64', '128', '192'],
+        correta: 0
     },
     // 48
     {
-        pergunta: 'Em um triângulo, se A = 30°, B = 60° e c = 20, qual o valor de a? (sen 30° = 1/2, sen 60° = √3/2)',
-        opcoes: ['20/√3', '20√3', '10', '40'],
-        correta: 0  // a = c·sen A/sen C, mas C=90°, sen90°=1 → a = c·sen30°/1 = 20/2 = 10? Não, vamos corrigir
-        // c está oposto a C=90°, então c/sen90 = a/sen30 → a = 20·(1/2)/1 = 10
+        pergunta: 'Área de um círculo com diâmetro 6 (π=3):',
+        opcoes: ['27', '54', '18', '36'],
+        correta: 0
     },
     // 49
     {
-        pergunta: 'Qual a medida da diagonal de um cubo de aresta 3? (use √3)',
-        opcoes: ['3√3', '3√2', '6', '9'],
-        correta: 0  // diagonal do cubo = aresta√3 = 3√3
+        pergunta: 'Quantas arestas tem uma pirâmide de base triangular?',
+        opcoes: ['6', '8', '4', '9'],
+        correta: 0
     },
     // 50
     {
-        pergunta: 'Em um triângulo retângulo, se o seno de um ângulo é 3/5, o cosseno desse ângulo é: (use a identidade fundamental)',
-        opcoes: ['4/5', '2/5', '1/5', '3/4'],
-        correta: 0  // cos²θ = 1 - (3/5)² = 1 - 9/25 = 16/25 → cos θ = 4/5
+        pergunta: 'Volume de um prisma de base quadrada (lado 3, altura 5):',
+        opcoes: ['45', '15', '75', '30'],
+        correta: 0
     }
 ];
 
@@ -394,7 +381,9 @@ function abrirPergunta(index, cardElement) {
     // Cria uma cópia das opções e índices, e embaralha
     const opcoesComIndices = perguntaObj.opcoes.map((texto, idx) => ({ texto, idx }));
     const embaralhadas = shuffleArray([...opcoesComIndices]);
+    // Nova lista de textos na ordem embaralhada
     const opcoesEmbaralhadas = embaralhadas.map(item => item.texto);
+    // Novo índice correto: posição onde está o item que tinha o índice original correto
     const novoIndiceCorreto = embaralhadas.findIndex(item => item.idx === perguntaObj.correta);
 
     // Monta o HTML com as opções embaralhadas
@@ -420,7 +409,7 @@ function abrirPergunta(index, cardElement) {
     `;
     questionContent.innerHTML = html;
 
-    // Armazena o índice correto embaralhado
+    // Armazena o índice correto embaralhado no escopo para uso na resposta
     window._indiceCorretoAtual = novoIndiceCorreto;
 
     // Inicia cronômetro
@@ -459,6 +448,7 @@ function responderPergunta(optIndex, perguntaObj, cardElement, indiceCorretoEmba
         feedbackMsg.textContent = '✅ Resposta correta!';
         feedbackMsg.className = 'feedback-msg show correct';
     } else {
+        // Encontra a letra da opção correta
         const letras = ['A', 'B', 'C', 'D'];
         const letraCorreta = letras[indiceCorretoEmbaralhado];
         feedbackMsg.textContent = `❌ Resposta incorreta. A correta era a letra ${letraCorreta}.`;
