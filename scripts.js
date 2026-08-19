@@ -1,502 +1,306 @@
-// ===== 50 PERGUNTAS DE GEOMETRIA (FÁCEIS, CONCEITUAIS, π = 3) =====
-const perguntas = [
-    // 1
-    {
-        pergunta: 'Qual é a fórmula do volume do cubo?',
-        opcoes: ['lado³', 'lado²', '6·lado²', 'lado·altura·largura'],
-        correta: 0
-    },
-    // 2
-    {
-        pergunta: 'Volume de um paralelepípedo de dimensões 2, 3 e 4 é:',
-        opcoes: ['24', '12', '48', '36'],
-        correta: 0
-    },
-    // 3
-    {
-        pergunta: 'Qual a área de um quadrado de lado 5?',
-        opcoes: ['25', '20', '10', '15'],
-        correta: 0
-    },
-    // 4
-    {
-        pergunta: 'Quantas faces tem um cubo?',
-        opcoes: ['6', '8', '4', '12'],
-        correta: 0
-    },
-    // 5
-    {
-        pergunta: 'Fórmula do volume do cilindro (use π = 3):',
-        opcoes: ['π·r²·h', '2·π·r·h', 'π·r·h', 'π·r²'],
-        correta: 0
-    },
-    // 6
-    {
-        pergunta: 'Volume de um cilindro com raio 2 e altura 5 (π=3):',
-        opcoes: ['60', '30', '120', '90'],
-        correta: 0
-    },
-    // 7
-    {
-        pergunta: 'Área de um retângulo de base 8 e altura 3:',
-        opcoes: ['24', '11', '16', '48'],
-        correta: 0
-    },
-    // 8
-    {
-        pergunta: 'Fórmula da área do círculo (use π = 3):',
-        opcoes: ['π·r²', '2·π·r', 'π·r', 'π·d'],
-        correta: 0
-    },
-    // 9
-    {
-        pergunta: 'Área de um círculo de raio 4 (π=3):',
-        opcoes: ['48', '24', '36', '12'],
-        correta: 0
-    },
-    // 10
-    {
-        pergunta: 'Qual a diagonal de um quadrado de lado 4? (use √2 ≈ 1,4)',
-        opcoes: ['5,6', '8', '4', '16'],
-        correta: 0
-    },
-    // 11
-    {
-        pergunta: 'Teorema de Pitágoras: qual a relação correta?',
-        opcoes: ['a² = b² + c²', 'a = b + c', 'a² = b² - c²', 'a = b·c'],
-        correta: 0
-    },
-    // 12
-    {
-        pergunta: 'Volume de uma pirâmide de base quadrada (lado 3, altura 4):',
-        opcoes: ['12', '36', '9', '48'],
-        correta: 0
-    },
-    // 13
-    {
-        pergunta: 'Fórmula do volume da esfera (use π=3):',
-        opcoes: ['(4/3)·π·r³', '4·π·r²', '(4/3)·π·r²', 'π·r³'],
-        correta: 0
-    },
-    // 14
-    {
-        pergunta: 'Volume de uma esfera de raio 3 (π=3):',
-        opcoes: ['108', '36', '72', '54'],
-        correta: 0
-    },
-    // 15
-    {
-        pergunta: 'Área de um triângulo de base 6 e altura 5:',
-        opcoes: ['15', '30', '11', '20'],
-        correta: 0
-    },
-    // 16
-    {
-        pergunta: 'Qual é o volume de um cubo de aresta 3?',
-        opcoes: ['27', '9', '81', '18'],
-        correta: 0
-    },
-    // 17
-    {
-        pergunta: 'Fórmula do volume do cone (use π=3):',
-        opcoes: ['(1/3)·π·r²·h', 'π·r²·h', '(1/3)·π·r·h', 'π·r·h'],
-        correta: 0
-    },
-    // 18
-    {
-        pergunta: 'Volume de um cone com raio 2 e altura 6 (π=3):',
-        opcoes: ['24', '12', '48', '36'],
-        correta: 0
-    },
-    // 19
-    {
-        pergunta: 'Qual a área de um losango com diagonais 8 e 6?',
-        opcoes: ['24', '48', '14', '28'],
-        correta: 0
-    },
-    // 20
-    {
-        pergunta: 'Quantas arestas tem um cubo?',
-        opcoes: ['12', '8', '6', '4'],
-        correta: 0
-    },
-    // 21
-    {
-        pergunta: 'Perímetro de um quadrado de lado 7:',
-        opcoes: ['28', '14', '49', '21'],
-        correta: 0
-    },
-    // 22
-    {
-        pergunta: 'Área de um trapézio de bases 5 e 7, altura 4:',
-        opcoes: ['24', '12', '48', '28'],
-        correta: 0
-    },
-    // 23
-    {
-        pergunta: 'Volume de um paralelepípedo de dimensões 2, 2 e 5:',
-        opcoes: ['20', '10', '40', '30'],
-        correta: 0
-    },
-    // 24
-    {
-        pergunta: 'Qual fórmula dá a área da superfície de um cubo?',
-        opcoes: ['6·l²', 'l³', '4·l²', '2·l²'],
-        correta: 0
-    },
-    // 25
-    {
-        pergunta: 'Volume de um prisma de base triangular (área base=8, altura=5):',
-        opcoes: ['40', '20', '80', '13'],
-        correta: 0
-    },
-    // 26
-    {
-        pergunta: 'Fórmula da área do triângulo:',
-        opcoes: ['(base·altura)/2', 'base·altura', 'base+altura', '(base²·altura)'],
-        correta: 0
-    },
-    // 27
-    {
-        pergunta: 'Área de um quadrado de lado 10 é:',
-        opcoes: ['100', '40', '20', '50'],
-        correta: 0
-    },
-    // 28
-    {
-        pergunta: 'Volume de um cilindro com raio 3 e altura 4 (π=3):',
-        opcoes: ['108', '36', '72', '54'],
-        correta: 0
-    },
-    // 29
-    {
-        pergunta: 'Qual a medida da diagonal de um cubo de aresta 3? (use √3≈1,7)',
-        opcoes: ['5,1', '9', '3', '6'],
-        correta: 0
-    },
-    // 30
-    {
-        pergunta: 'Área de um círculo de raio 5 (π=3):',
-        opcoes: ['75', '30', '15', '50'],
-        correta: 0
-    },
-    // 31
-    {
-        pergunta: 'Volume de uma pirâmide de base retangular (área=12, altura=6):',
-        opcoes: ['24', '72', '36', '48'],
-        correta: 0
-    },
-    // 32
-    {
-        pergunta: 'Quantos vértices tem um cubo?',
-        opcoes: ['8', '12', '6', '4'],
-        correta: 0
-    },
-    // 33
-    {
-        pergunta: 'Fórmula da área do retângulo:',
-        opcoes: ['base·altura', '2·(base+altura)', 'base+altura', 'base²'],
-        correta: 0
-    },
-    // 34
-    {
-        pergunta: 'Volume de uma esfera de raio 2 (π=3):',
-        opcoes: ['32', '16', '24', '48'],
-        correta: 0
-    },
-    // 35
-    {
-        pergunta: 'Área de um paralelogramo de base 7 e altura 4:',
-        opcoes: ['28', '11', '14', '21'],
-        correta: 0
-    },
-    // 36
-    {
-        pergunta: 'Volume de um cone com raio 3 e altura 5 (π=3):',
-        opcoes: ['45', '15', '30', '60'],
-        correta: 0
-    },
-    // 37
-    {
-        pergunta: 'Qual é a fórmula da diagonal de um quadrado (lado L)?',
-        opcoes: ['L·√2', '2·L', 'L²', 'L·√3'],
-        correta: 0
-    },
-    // 38
-    {
-        pergunta: 'Perímetro de um retângulo de lados 4 e 6:',
-        opcoes: ['20', '24', '10', '48'],
-        correta: 0
-    },
-    // 39
-    {
-        pergunta: 'Área de um triângulo equilátero de lado 4 (use √3≈1,7):',
-        opcoes: ['6,8', '16', '8', '12'],
-        correta: 0
-    },
-    // 40
-    {
-        pergunta: 'Volume de um cubo de aresta 4:',
-        opcoes: ['64', '16', '256', '48'],
-        correta: 0
-    },
-    // 41
-    {
-        pergunta: 'Fórmula do volume do prisma:',
-        opcoes: ['Área da base · altura', 'Comprimento · largura', '2·(base+altura)', 'base²·altura'],
-        correta: 0
-    },
-    // 42
-    {
-        pergunta: 'Quantas faces tem uma pirâmide de base quadrada?',
-        opcoes: ['5', '4', '6', '8'],
-        correta: 0
-    },
-    // 43
-    {
-        pergunta: 'Área de um losango com diagonais 10 e 6:',
-        opcoes: ['30', '60', '16', '20'],
-        correta: 0
-    },
-    // 44
-    {
-        pergunta: 'Volume de um cilindro com diâmetro 4 e altura 6 (π=3):',
-        opcoes: ['72', '24', '144', '36'],
-        correta: 0
-    },
-    // 45
-    {
-        pergunta: 'Qual a área de um trapézio de bases 4 e 8, altura 3?',
-        opcoes: ['18', '12', '24', '36'],
-        correta: 0
-    },
-    // 46
-    {
-        pergunta: 'Fórmula da área do quadrado:',
-        opcoes: ['lado²', '4·lado', '2·lado', 'lado³'],
-        correta: 0
-    },
-    // 47
-    {
-        pergunta: 'Volume de uma esfera de raio 4 (π=3):',
-        opcoes: ['256', '64', '128', '192'],
-        correta: 0
-    },
-    // 48
-    {
-        pergunta: 'Área de um círculo com diâmetro 6 (π=3):',
-        opcoes: ['27', '54', '18', '36'],
-        correta: 0
-    },
-    // 49
-    {
-        pergunta: 'Quantas arestas tem uma pirâmide de base triangular?',
-        opcoes: ['6', '8', '4', '9'],
-        correta: 0
-    },
-    // 50
-    {
-        pergunta: 'Volume de um prisma de base quadrada (lado 3, altura 5):',
-        opcoes: ['45', '15', '75', '30'],
-        correta: 0
-    }
-];
+import java.util.*;
 
-// ===== ELEMENTOS DOM =====
-const cardsContainer = document.getElementById('cards-container');
-const expandedQuestion = document.getElementById('expanded-question');
-const questionContent = document.getElementById('question-content');
-const closeModalBtn = document.getElementById('close-modal');
-const helpOverlay = document.getElementById('helpOverlay');
-const closeHelpBtn = document.getElementById('closeHelp');
-const helpBtn = document.getElementById('helpBtn');
+/**
+ * Quiz com 50 perguntas de múltipla escolha (matemática, geometria, conhecimentos gerais).
+ * As alternativas são embaralhadas automaticamente, e as respostas corretas são definidas
+ * de acordo com o conteúdo de cada pergunta.
+ */
+public class Quiz {
 
-let currentCardIndex = null;
-let isAnswered = false;
-let score = 0;
+    // ==================== CLASSE PERGUNTA ====================
+    static class Pergunta {
+        private final String enunciado;
+        private List<String> alternativas;
+        private int indiceCorreta; // 0 = A, 1 = B, 2 = C, 3 = D
 
-// ===== CRONÔMETRO =====
-let timerInterval = null;
-let seconds = 0;
-let timerRunning = false;
-
-function iniciarCronometro() {
-    if (timerRunning) return;
-    seconds = 0;
-    atualizarDisplayTimer();
-    timerRunning = true;
-    timerInterval = setInterval(() => {
-        seconds++;
-        atualizarDisplayTimer();
-    }, 1000);
-}
-
-function pararCronometro() {
-    if (timerInterval) {
-        clearInterval(timerInterval);
-        timerInterval = null;
-    }
-    timerRunning = false;
-}
-
-function atualizarDisplayTimer() {
-    const timerEl = document.getElementById('timerDisplay');
-    if (timerEl) {
-        const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
-        const secs = String(seconds % 60).padStart(2, '0');
-        timerEl.textContent = `⏱️ ${mins}:${secs}`;
-    }
-}
-
-function resetarTimerDisplay() {
-    const timerEl = document.getElementById('timerDisplay');
-    if (timerEl) timerEl.textContent = '⏱️ 00:00';
-}
-
-// ===== FUNÇÃO PARA EMBARALHAR ARRAY =====
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-// ===== GERAR 50 CARTAS =====
-for (let i = 0; i < 50; i++) {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    card.textContent = i + 1;
-    card.dataset.index = i;
-    card.addEventListener('click', () => abrirPergunta(i, card));
-    cardsContainer.appendChild(card);
-}
-
-// ===== FUNÇÃO PARA ABRIR MODAL =====
-function abrirPergunta(index, cardElement) {
-    if (cardElement.classList.contains('hidden-card')) return;
-    currentCardIndex = index;
-    const perguntaObj = perguntas[index % perguntas.length];
-
-    // Cria uma cópia das opções e índices, e embaralha
-    const opcoesComIndices = perguntaObj.opcoes.map((texto, idx) => ({ texto, idx }));
-    const embaralhadas = shuffleArray([...opcoesComIndices]);
-    // Nova lista de textos na ordem embaralhada
-    const opcoesEmbaralhadas = embaralhadas.map(item => item.texto);
-    // Novo índice correto: posição onde está o item que tinha o índice original correto
-    const novoIndiceCorreto = embaralhadas.findIndex(item => item.idx === perguntaObj.correta);
-
-    // Monta o HTML com as opções embaralhadas
-    let html = `
-        <div class="question-text">${perguntaObj.pergunta}</div>
-        <div class="score-display">
-            <span>🏆 Acertos: <span id="scoreDisplay">${score}</span></span>
-            <span class="timer-display" id="timerDisplay">⏱️ 00:00</span>
-        </div>
-        <div class="options-grid" id="optionsGrid">
-    `;
-    const letras = ['A', 'B', 'C', 'D'];
-    opcoesEmbaralhadas.forEach((opcao, i) => {
-        html += `
-            <button class="option-btn" data-optindex="${i}" data-original-correct="${novoIndiceCorreto}">
-                <span class="letter">${letras[i]}</span> ${opcao}
-            </button>
-        `;
-    });
-    html += `
-        </div>
-        <div class="feedback-msg" id="feedbackMsg"></div>
-    `;
-    questionContent.innerHTML = html;
-
-    // Armazena o índice correto embaralhado no escopo para uso na resposta
-    window._indiceCorretoAtual = novoIndiceCorreto;
-
-    // Inicia cronômetro
-    iniciarCronometro();
-
-    // Eventos das opções
-    document.querySelectorAll('.option-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            if (isAnswered) return;
-            const optIndex = parseInt(btn.dataset.optindex);
-            responderPergunta(optIndex, perguntaObj, cardElement, window._indiceCorretoAtual);
-        });
-    });
-
-    isAnswered = false;
-    expandedQuestion.classList.add('show');
-}
-
-// ===== FUNÇÃO PARA RESPONDER =====
-function responderPergunta(optIndex, perguntaObj, cardElement, indiceCorretoEmbaralhado) {
-    if (isAnswered) return;
-    isAnswered = true;
-
-    pararCronometro();
-
-    const allBtns = document.querySelectorAll('.option-btn');
-    const feedbackMsg = document.getElementById('feedbackMsg');
-    const scoreSpan = document.getElementById('scoreDisplay');
-
-    allBtns.forEach(btn => btn.classList.add('disabled'));
-
-    const acertou = (optIndex === indiceCorretoEmbaralhado);
-    if (acertou) {
-        score++;
-        scoreSpan.textContent = score;
-        feedbackMsg.textContent = '✅ Resposta correta!';
-        feedbackMsg.className = 'feedback-msg show correct';
-    } else {
-        // Encontra a letra da opção correta
-        const letras = ['A', 'B', 'C', 'D'];
-        const letraCorreta = letras[indiceCorretoEmbaralhado];
-        feedbackMsg.textContent = `❌ Resposta incorreta. A correta era a letra ${letraCorreta}.`;
-        feedbackMsg.className = 'feedback-msg show wrong';
-    }
-
-    allBtns.forEach((btn, idx) => {
-        if (idx === indiceCorretoEmbaralhado) {
-            btn.classList.add('correct');
-        } else if (idx === optIndex && !acertou) {
-            btn.classList.add('wrong');
+        public Pergunta(String enunciado, List<String> alternativas, int indiceCorreta) {
+            if (indiceCorreta < 0 || indiceCorreta >= alternativas.size()) {
+                throw new IllegalArgumentException("Índice da resposta correta inválido.");
+            }
+            this.enunciado = enunciado;
+            this.alternativas = new ArrayList<>(alternativas);
+            this.indiceCorreta = indiceCorreta;
         }
-    });
 
-    cardElement.classList.add('hidden-card');
-    cardElement.classList.remove('flipped');
+        public String getEnunciado() {
+            return enunciado;
+        }
+
+        public List<String> getAlternativas() {
+            return Collections.unmodifiableList(alternativas);
+        }
+
+        public int getIndiceCorreta() {
+            return indiceCorreta;
+        }
+
+        public void embaralharAlternativas() {
+            List<Map.Entry<String, Integer>> pares = new ArrayList<>();
+            for (int i = 0; i < alternativas.size(); i++) {
+                pares.add(new AbstractMap.SimpleEntry<>(alternativas.get(i), i));
+            }
+            Collections.shuffle(pares);
+
+            List<String> novas = new ArrayList<>();
+            int novoIndice = -1;
+            for (int i = 0; i < pares.size(); i++) {
+                String texto = pares.get(i).getKey();
+                int original = pares.get(i).getValue();
+                novas.add(texto);
+                if (original == indiceCorreta) {
+                    novoIndice = i;
+                }
+            }
+            this.alternativas = novas;
+            this.indiceCorreta = novoIndice;
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder(enunciado).append("\n");
+            char letra = 'A';
+            for (String alt : alternativas) {
+                sb.append("   ").append(letra++).append(") ").append(alt).append("\n");
+            }
+            return sb.toString();
+        }
+    }
+
+    // ==================== 50 NOVAS PERGUNTAS ====================
+    private static List<Pergunta> criarPerguntas() {
+        List<Pergunta> perguntas = new ArrayList<>();
+
+        // Cada entrada: [enunciado, alternativaA, alternativaB, alternativaC, alternativaD, indiceCorreto (0-3)]
+        String[][] dados = {
+            // 1
+            {"Qual é a fórmula da área total do cone?", "πr(r+g)", "2πr(r+g)", "πr²", "πrg", "0"},
+            // 2
+            {"Qual é a fórmula da área total da esfera?", "4πr²", "2πr²", "πr²", "4πr³", "0"},
+            // 3
+            {"Qual é a fórmula da área total do cilindro?", "2πr(h+r)", "πr(h+r)", "2πrh", "πr²h", "0"},
+            // 4
+            {"Qual é a fórmula da área total do cubo?", "6a²", "a³", "4a²", "2a²", "0"},
+            // 5
+            {"Qual é a fórmula da área total de um prisma reto?", "2·Ab + Al", "Ab + Al", "2·Ab", "Al", "0"},
+            // 6
+            {"Qual é a fórmula da área de um triângulo?", "base·altura/2", "base·altura", "lado²", "πr²", "0"},
+            // 7
+            {"Qual é a fórmula do volume do cone?", "πr²h/3", "πr²h", "2πr²h/3", "πr³/3", "0"},
+            // 8
+            {"Qual é a fórmula do volume da esfera?", "4πr³/3", "πr³", "4πr²", "2πr³/3", "0"},
+            // 9
+            {"Qual é a fórmula do volume do cilindro?", "πr²h", "2πr²h", "πr²", "πrh", "0"},
+            // 10
+            {"Qual é a fórmula do volume do cubo?", "a³", "6a²", "a²", "4a³", "0"},
+            // 11
+            {"Calcule a área total de um cubo de lado 3.", "54", "27", "36", "18", "0"},
+            // 12
+            {"Calcule o volume de um cubo de lado 4.", "64", "48", "16", "96", "0"},
+            // 13
+            {"Calcule o volume de um cone com raio 3 e altura 4 (use π = 3).", "36", "48", "24", "12", "0"},
+            // 14
+            {"Calcule a área total de um cilindro com raio 2 e altura 5 (use π = 3).", "84", "60", "72", "48", "0"},
+            // 15
+            {"Qual é a área de um triângulo de base 6 e altura 8?", "24", "48", "14", "28", "0"},
+            // 16
+            {"Qual é a área de um círculo de raio 5 (use π = 3)?", "75", "30", "15", "100", "0"},
+            // 17
+            {"Qual é a circunferência de um círculo de raio 7 (use π = 3)?", "42", "21", "14", "49", "0"},
+            // 18
+            {"Qual é a área de um quadrado de lado 9?", "81", "18", "36", "72", "0"},
+            // 19
+            {"Qual é o perímetro de um retângulo de lados 4 e 7?", "22", "11", "28", "14", "0"},
+            // 20
+            {"Qual é a área de um losango com diagonais 6 e 8?", "24", "48", "14", "12", "0"},
+            // 21
+            {"Qual é a área de um paralelogramo de base 5 e altura 6?", "30", "11", "60", "15", "0"},
+            // 22
+            {"Qual é a soma dos ângulos internos de um triângulo?", "180°", "90°", "360°", "270°", "0"},
+            // 23
+            {"Qual é a soma dos ângulos internos de um quadrilátero?", "360°", "180°", "540°", "720°", "0"},
+            // 24
+            {"Qual é o teorema de Pitágoras?", "a²+b²=c²", "a+b=c", "a²+b²=c", "a+b²=c²", "0"},
+            // 25
+            {"Qual é o erro comum na fórmula da área do círculo?", "Usar 2πr", "Usar πr²", "Usar πd", "Usar 2πr²", "0"},
+            // 26
+            {"Qual é a raiz quadrada de 144?", "12", "14", "16", "10", "0"},
+            // 27
+            {"Qual é a raiz quadrada de 81?", "9", "7", "8", "11", "0"},
+            // 28
+            {"Quanto é 7 × 8?", "56", "48", "64", "42", "0"},
+            // 29
+            {"Quanto é 15% de 200?", "30", "15", "20", "25", "0"},
+            // 30
+            {"Quanto é 25% de 80?", "20", "25", "15", "30", "0"},
+            // 31
+            {"Qual é a média de 4, 6, 8 e 10?", "7", "6", "8", "9", "0"},
+            // 32
+            {"Qual é a moda de 2, 3, 3, 4, 5?", "3", "2", "4", "5", "0"},
+            // 33
+            {"Qual é a mediana de 1, 3, 5, 7, 9?", "5", "3", "7", "6", "0"},
+            // 34
+            {"Qual é o próximo número da sequência: 2, 4, 8, 16, ...?", "32", "24", "30", "18", "0"},
+            // 35
+            {"Qual é a raiz cúbica de 27?", "3", "9", "6", "12", "0"},
+            // 36
+            {"Quanto é 2 elevado a 5?", "32", "16", "8", "64", "0"},
+            // 37
+            {"Quanto é 3 elevado a 3?", "27", "9", "81", "18", "0"},
+            // 38
+            {"Quanto é 10 elevado a 2?", "100", "20", "1000", "10", "0"},
+            // 39
+            {"Qual é a distância entre os pontos (0,0) e (3,4)?", "5", "7", "1", "6", "0"},
+            // 40
+            {"Qual é a equação da reta que passa por (0,0) e (1,1)?", "y = x", "y = 2x", "y = x²", "y = x+1", "0"},
+            // 41
+            {"Qual é o seno de 30°?", "1/2", "√3/2", "1", "0", "0"},
+            // 42
+            {"Qual é o cosseno de 60°?", "1/2", "√3/2", "1", "0", "0"},
+            // 43
+            {"Qual é a tangente de 45°?", "1", "0", "√3", "1/2", "0"},
+            // 44
+            {"Qual é a derivada de x²?", "2x", "x", "x²", "2", "0"},
+            // 45
+            {"Qual é a integral indefinida de 2x?", "x²", "2x²", "x", "x²/2", "0"},
+            // 46
+            {"Calcule a área total de um cone com raio 3 e geratriz 5 (use π = 3).", "72", "60", "48", "36", "0"},
+            // 47
+            {"Calcule o volume de uma esfera de raio 3 (use π = 3).", "108", "36", "72", "12", "0"},
+            // 48
+            {"Qual é a área total de um cubo de lado x?", "6x²", "x³", "4x²", "2x²", "0"},
+            // 49
+            {"Qual é o volume de um cubo de lado x?", "x³", "6x²", "x²", "4x³", "0"},
+            // 50
+            {"Calcule o volume de um cone com raio 4 e altura 6 (use π = 3).", "96", "72", "48", "144", "0"}
+        };
+
+        for (String[] linha : dados) {
+            String enunciado = linha[0];
+            List<String> alternativas = Arrays.asList(linha[1], linha[2], linha[3], linha[4]);
+            int indiceCorreto = Integer.parseInt(linha[5]);
+            perguntas.add(new Pergunta(enunciado, alternativas, indiceCorreto));
+        }
+
+        return perguntas;
+    }
+
+    // ==================== ESTATÍSTICAS ====================
+    private static class Estatisticas {
+        private int totalJogos = 0;
+        private int totalPerguntasRespondidas = 0;
+        private int totalAcertos = 0;
+        private final List<Integer> historicoAcertos = new ArrayList<>();
+
+        public void registrarJogo(int acertos, int total) {
+            totalJogos++;
+            totalPerguntasRespondidas += total;
+            totalAcertos += acertos;
+            historicoAcertos.add(acertos);
+        }
+
+        public void exibir() {
+            System.out.println("\n=== ESTATÍSTICAS ===");
+            System.out.println("Total de partidas: " + totalJogos);
+            if (totalJogos > 0) {
+                double mediaAcertos = (double) totalAcertos / totalPerguntasRespondidas * 100;
+                System.out.printf("Taxa de acerto geral: %.1f%%\n", mediaAcertos);
+                System.out.println("Últimos resultados: " + historicoAcertos);
+            } else {
+                System.out.println("Nenhuma partida jogada ainda.");
+            }
+        }
+    }
+
+    // ==================== MAIN ====================
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Estatisticas estatisticas = new Estatisticas();
+        Random random = new Random();
+
+        while (true) {
+            System.out.println("\n===== MENU PRINCIPAL =====");
+            System.out.println("1. Iniciar novo quiz (50 perguntas)");
+            System.out.println("2. Ver estatísticas");
+            System.out.println("3. Sair");
+            System.out.print("Escolha uma opção: ");
+
+            String opcao = scanner.nextLine().trim();
+            switch (opcao) {
+                case "1":
+                    iniciarQuiz(scanner, random, estatisticas);
+                    break;
+                case "2":
+                    estatisticas.exibir();
+                    break;
+                case "3":
+                    System.out.println("Saindo... Até logo!");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        }
+    }
+
+    private static void iniciarQuiz(Scanner scanner, Random random, Estatisticas estatisticas) {
+        List<Pergunta> perguntas = criarPerguntas();
+
+        // Embaralhar alternativas de cada pergunta (a resposta correta acompanha)
+        for (Pergunta p : perguntas) {
+            p.embaralharAlternativas();
+        }
+
+        // Embaralhar ordem das perguntas
+        Collections.shuffle(perguntas, random);
+
+        int total = perguntas.size();
+        int acertos = 0;
+
+        System.out.println("\n=== NOVO QUIZ (50 perguntas) ===");
+        System.out.println("Responda com a letra (A, B, C ou D).\n");
+
+        for (int i = 0; i < total; i++) {
+            Pergunta p = perguntas.get(i);
+            System.out.println("Pergunta " + (i + 1) + "/" + total);
+            System.out.println(p);
+
+            char escolhaLetra = lerResposta(scanner);
+            if (escolhaLetra == 0) {
+                i--; // repete a pergunta se entrada inválida
+                continue;
+            }
+
+            int escolhaIndice = escolhaLetra - 'A';
+            if (escolhaIndice == p.getIndiceCorreta()) {
+                System.out.println("✅ Correto!\n");
+                acertos++;
+            } else {
+                char letraCorreta = (char) ('A' + p.getIndiceCorreta());
+                System.out.println("❌ Errado! A resposta correta era " + letraCorreta + ".\n");
+            }
+        }
+
+        System.out.println("=== FIM DO QUIZ ===");
+        System.out.printf("Você acertou %d de %d perguntas (%.1f%%).\n",
+                acertos, total, (100.0 * acertos) / total);
+
+        estatisticas.registrarJogo(acertos, total);
+    }
+
+    private static char lerResposta(Scanner scanner) {
+        while (true) {
+            System.out.print("Sua resposta: ");
+            String entrada = scanner.nextLine().trim().toUpperCase();
+            if (entrada.isEmpty()) {
+                System.out.println("Entrada vazia. Digite uma letra (A-D).");
+                continue;
+            }
+            char c = entrada.charAt(0);
+            if (c >= 'A' && c <= 'D') {
+                return c;
+            } else {
+                System.out.println("Entrada inválida! Digite apenas A, B, C ou D.");
+            }
+        }
+    }
 }
-
-// ===== FECHAR MODAL =====
-function fecharModal() {
-    pararCronometro();
-    resetarTimerDisplay();
-    expandedQuestion.classList.remove('show');
-    questionContent.innerHTML = '';
-    isAnswered = false;
-}
-
-// ===== EVENTOS =====
-closeModalBtn.addEventListener('click', fecharModal);
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') fecharModal();
-});
-expandedQuestion.addEventListener('click', (e) => {
-    if (e.target === expandedQuestion) fecharModal();
-});
-
-// ===== AJUDA INICIAL =====
-if (localStorage.getItem('quizHelpShown') === 'true') {
-    helpOverlay.classList.add('hidden');
-} else {
-    helpOverlay.classList.remove('hidden');
-}
-
-closeHelpBtn.addEventListener('click', () => {
-    helpOverlay.classList.add('hidden');
-    localStorage.setItem('quizHelpShown', 'true');
-});
-
-helpBtn.addEventListener('click', () => {
-    helpOverlay.classList.remove('hidden');
-});
