@@ -1,256 +1,419 @@
-// ===== BANCO DE DADOS DE PERGUNTAS DE GEOMETRIA E MATEMÁTICA =====
+// ===== BANCO DE DADOS: 50 QUESTÕES DE FUNÇÃO DO 2º GRAU (y = ax² + c) =====
 const perguntas = [
     {
-        pergunta: "Qual a fórmula da área total do cone?",
-        opcoes: ["π · r · (r + g)", "2 · π · r · (r + g)", "π · r²", "π · r · g"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: -4,
+        opcoes: ["y = x² - 4", "y = -x² - 4", "y = x² + 4", "y = -x² + 4"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula da área total da esfera?",
-        opcoes: ["4 · π · r²", "2 · π · r²", "π · r²", "4 · π · r³"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: 4,
+        opcoes: ["y = -x² + 4", "y = x² + 4", "y = -x² - 4", "y = x² - 4"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula da área total do cilindro?",
-        opcoes: ["2 · π · r · (h + r)", "π · r · (h + r)", "2 · π · r · h", "π · r² · h"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 2, c: -8,
+        opcoes: ["y = 2x² - 8", "y = -2x² - 8", "y = 2x² + 8", "y = x² - 8"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula da área total do cubo?",
-        opcoes: ["6 · a²", "a³", "4 · a²", "2 · a²"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -2, c: 2,
+        opcoes: ["y = -2x² + 2", "y = 2x² + 2", "y = -2x² - 2", "y = -x² + 2"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula da área total de um prisma reto?",
-        opcoes: ["2 · Ab + Al", "Ab + Al", "2 · Ab", "Al"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: 3,
+        opcoes: ["y = x² + 3", "y = x² - 3", "y = -x² + 3", "y = -x² - 3"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula da área de um triângulo?",
-        opcoes: ["(base · altura) / 2", "base · altura", "lado²", "π · r²"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: -3,
+        opcoes: ["y = -x² - 3", "y = -x² + 3", "y = x² - 3", "y = x² + 3"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula do volume do cone?",
-        opcoes: ["(π · r² · h) / 3", "π · r² · h", "(2 · π · r² · h) / 3", "(π · r³) / 3"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 3, c: 0,
+        opcoes: ["y = 3x²", "y = -3x²", "y = x² + 3", "y = 3x² - 3"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula do volume da esfera?",
-        opcoes: ["(4 · π · r³) / 3", "π · r³", "4 · π · r²", "(2 · π · r³) / 3"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -3, c: 0,
+        opcoes: ["y = -3x²", "y = 3x²", "y = -x² - 3", "y = -3x² + 3"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula do volume do cilindro?",
-        opcoes: ["π · r² · h", "2 · π · r² · h", "π · r²", "π · r · h"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: -1,
+        opcoes: ["y = x² - 1", "y = x² + 1", "y = -x² - 1", "y = -x² + 1"],
         correta: 0
     },
     {
-        pergunta: "Qual a fórmula do volume do cubo?",
-        opcoes: ["a³", "6 · a²", "a²", "4 · a³"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: 1,
+        opcoes: ["y = -x² + 1", "y = x² + 1", "y = -x² - 1", "y = x² - 1"],
         correta: 0
     },
     {
-        pergunta: "Calcule a área total de um cubo de lado 3.",
-        opcoes: ["54", "27", "36", "18"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 0.5, c: -2,
+        opcoes: ["y = 0,5x² - 2", "y = -0,5x² - 2", "y = 0,5x² + 2", "y = 2x² - 2"],
         correta: 0
     },
     {
-        pergunta: "Calcule o volume de um cubo de lado 4.",
-        opcoes: ["64", "48", "16", "96"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -0.5, c: 2,
+        opcoes: ["y = -0,5x² + 2", "y = 0,5x² + 2", "y = -0,5x² - 2", "y = -2x² + 2"],
         correta: 0
     },
     {
-        pergunta: "Calcule o volume de um cone com raio 3 e altura 4 (use π=3).",
-        opcoes: ["36", "48", "24", "12"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: -9,
+        opcoes: ["y = x² - 9", "y = -x² - 9", "y = x² + 9", "y = 3x² - 9"],
         correta: 0
     },
     {
-        pergunta: "Calcule a área total de um cilindro com raio 2 e altura 5 (use π=3).",
-        opcoes: ["84", "60", "72", "48"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: 9,
+        opcoes: ["y = -x² + 9", "y = x² + 9", "y = -x² - 9", "y = -3x² + 9"],
         correta: 0
     },
     {
-        pergunta: "Qual a área de um triângulo de base 6 e altura 8?",
-        opcoes: ["24", "48", "14", "28"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 4, c: -4,
+        opcoes: ["y = 4x² - 4", "y = -4x² - 4", "y = 4x² + 4", "y = x² - 4"],
         correta: 0
     },
     {
-        pergunta: "Qual a área de um círculo de raio 5 (use π=3)?",
-        opcoes: ["75", "30", "15", "100"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -4, c: 4,
+        opcoes: ["y = -4x² + 4", "y = 4x² + 4", "y = -4x² - 4", "y = -x² + 4"],
         correta: 0
     },
     {
-        pergunta: "Qual a circunferência de um círculo de raio 7 (use π=3)?",
-        opcoes: ["42", "21", "14", "49"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 2, c: 0,
+        opcoes: ["y = 2x²", "y = -2x²", "y = 2x² + 2", "y = 2x² - 2"],
         correta: 0
     },
     {
-        pergunta: "Qual a área de um quadrado de lado 9?",
-        opcoes: ["81", "18", "36", "72"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -2, c: 0,
+        opcoes: ["y = -2x²", "y = 2x²", "y = -2x² + 2", "y = -2x² - 2"],
         correta: 0
     },
     {
-        pergunta: "Qual o perímetro de um retângulo de lados 4 e 7?",
-        opcoes: ["22", "11", "28", "14"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: 5,
+        opcoes: ["y = x² + 5", "y = x² - 5", "y = -x² + 5", "y = -x² - 5"],
         correta: 0
     },
     {
-        pergunta: "Qual a área de um losango com diagonais 6 e 8?",
-        opcoes: ["24", "48", "14", "12"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: -5,
+        opcoes: ["y = -x² - 5", "y = -x² + 5", "y = x² - 5", "y = x² + 5"],
         correta: 0
     },
     {
-        pergunta: "Qual a área de um paralelogramo de base 5 e altura 6?",
-        opcoes: ["30", "11", "60", "15"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 3, c: -3,
+        opcoes: ["y = 3x² - 3", "y = -3x² - 3", "y = 3x² + 3", "y = x² - 3"],
         correta: 0
     },
     {
-        pergunta: "Qual a soma dos ângulos internos de um triângulo?",
-        opcoes: ["180°", "90°", "360°", "270°"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -3, c: 3,
+        opcoes: ["y = -3x² + 3", "y = 3x² + 3", "y = -3x² - 3", "y = -x² + 3"],
         correta: 0
     },
     {
-        pergunta: "Qual a soma dos ângulos internos de um quadrilátero?",
-        opcoes: ["360°", "180°", "540°", "720°"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 0.5, c: 0,
+        opcoes: ["y = 0,5x²", "y = -0,5x²", "y = 0,5x² + 1", "y = 0,5x² - 1"],
         correta: 0
     },
     {
-        pergunta: "Qual o teorema de Pitágoras?",
-        opcoes: ["a² + b² = c²", "a + b = c", "a² + b² = c", "a + b² = c²"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -0.5, c: 0,
+        opcoes: ["y = -0,5x²", "y = 0,5x²", "y = -0,5x² + 1", "y = -0,5x² - 1"],
         correta: 0
     },
     {
-        pergunta: "Qual o erro comum na fórmula da área do círculo?",
-        opcoes: ["Usar 2 · π · r", "Usar π · r²", "Usar π · d", "Usar 2 · π · r²"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 2, c: -2,
+        opcoes: ["y = 2x² - 2", "y = -2x² - 2", "y = 2x² + 2", "y = x² - 2"],
         correta: 0
     },
     {
-        pergunta: "Qual a raiz quadrada de 144?",
-        opcoes: ["12", "14", "16", "10"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -2, c: 8,
+        opcoes: ["y = -2x² + 8", "y = 2x² + 8", "y = -2x² - 8", "y = -x² + 8"],
         correta: 0
     },
     {
-        pergunta: "Qual a raiz quadrada de 81?",
-        opcoes: ["9", "7", "8", "11"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: -25,
+        opcoes: ["y = x² - 25", "y = -x² - 25", "y = x² + 25", "y = 5x² - 25"],
         correta: 0
     },
     {
-        pergunta: "Quanto é 7 x 8?",
-        opcoes: ["56", "48", "64", "42"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: 25,
+        opcoes: ["y = -x² + 25", "y = x² + 25", "y = -x² - 25", "y = -5x² + 25"],
         correta: 0
     },
     {
-        pergunta: "Quanto é 15% de 200?",
-        opcoes: ["30", "15", "20", "25"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: 2,
+        opcoes: ["y = x² + 2", "y = x² - 2", "y = -x² + 2", "y = -x² - 2"],
         correta: 0
     },
     {
-        pergunta: "Quanto é 25% de 80?",
-        opcoes: ["20", "25", "15", "30"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: -2,
+        opcoes: ["y = -x² - 2", "y = -x² + 2", "y = x² - 2", "y = x² + 2"],
         correta: 0
     },
     {
-        pergunta: "Qual a média de 4, 6, 8 e 10?",
-        opcoes: ["7", "6", "8", "9"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 5, c: -5,
+        opcoes: ["y = 5x² - 5", "y = -5x² - 5", "y = 5x² + 5", "y = x² - 5"],
         correta: 0
     },
     {
-        pergunta: "Qual a moda de 2, 3, 3, 4, 5?",
-        opcoes: ["3", "2", "4", "5"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -5, c: 5,
+        opcoes: ["y = -5x² + 5", "y = 5x² + 5", "y = -5x² - 5", "y = -x² + 5"],
         correta: 0
     },
     {
-        pergunta: "Qual a mediana de 1, 3, 5, 7, 9?",
-        opcoes: ["5", "3", "7", "6"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: 0,
+        opcoes: ["y = x²", "y = -x²", "y = x² + 1", "y = x² - 1"],
         correta: 0
     },
     {
-        pergunta: "Qual o próximo número da sequência: 2, 4, 8, 16, ...?",
-        opcoes: ["32", "24", "30", "18"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: 0,
+        opcoes: ["y = -x²", "y = x²", "y = -x² + 1", "y = -x² - 1"],
         correta: 0
     },
     {
-        pergunta: "Qual a raiz cúbica de 27?",
-        opcoes: ["3", "9", "6", "12"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 2, c: 4,
+        opcoes: ["y = 2x² + 4", "y = 2x² - 4", "y = -2x² + 4", "y = -2x² - 4"],
         correta: 0
     },
     {
-        pergunta: "Quanto é 2 elevado a 5?",
-        opcoes: ["32", "16", "8", "64"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -2, c: -4,
+        opcoes: ["y = -2x² - 4", "y = -2x² + 4", "y = 2x² - 4", "y = 2x² + 4"],
         correta: 0
     },
     {
-        pergunta: "Quanto é 3 elevado a 3?",
-        opcoes: ["27", "9", "81", "18"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 0.5, c: -4,
+        opcoes: ["y = 0,5x² - 4", "y = -0,5x² - 4", "y = 0,5x² + 4", "y = x² - 4"],
         correta: 0
     },
     {
-        pergunta: "Quanto é 10 elevado a 2?",
-        opcoes: ["100", "20", "1000", "10"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -0.5, c: 4,
+        opcoes: ["y = -0,5x² + 4", "y = 0,5x² + 4", "y = -0,5x² - 4", "y = -x² + 4"],
         correta: 0
     },
     {
-        pergunta: "Qual a distância entre os pontos (0,0) e (3,4)?",
-        opcoes: ["5", "7", "1", "6"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 3, c: -12,
+        opcoes: ["y = 3x² - 12", "y = -3x² - 12", "y = 3x² + 12", "y = x² - 12"],
         correta: 0
     },
     {
-        pergunta: "Qual a equação da reta que passa por (0,0) e (1,1)?",
-        opcoes: ["y = x", "y = 2x", "y = x²", "y = x + 1"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -3, c: 12,
+        opcoes: ["y = -3x² + 12", "y = 3x² + 12", "y = -3x² - 12", "y = -x² + 12"],
         correta: 0
     },
     {
-        pergunta: "Qual o seno de 30°?",
-        opcoes: ["1/2", "√3/2", "1", "0"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: -16,
+        opcoes: ["y = x² - 16", "y = -x² - 16", "y = x² + 16", "y = 4x² - 16"],
         correta: 0
     },
     {
-        pergunta: "Qual o cosseno de 60°?",
-        opcoes: ["1/2", "√3/2", "1", "0"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: 16,
+        opcoes: ["y = -x² + 16", "y = x² + 16", "y = -x² - 16", "y = -4x² + 16"],
         correta: 0
     },
     {
-        pergunta: "Qual a tangente de 45°?",
-        opcoes: ["1", "0", "√3", "1/2"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 4, c: 0,
+        opcoes: ["y = 4x²", "y = -4x²", "y = 4x² + 4", "y = 4x² - 4"],
         correta: 0
     },
     {
-        pergunta: "Qual a derivada de x²?",
-        opcoes: ["2x", "x", "x²", "2"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -4, c: 0,
+        opcoes: ["y = -4x²", "y = 4x²", "y = -4x² + 4", "y = -4x² - 4"],
         correta: 0
     },
     {
-        pergunta: "Qual a integral indefinida de 2x?",
-        opcoes: ["x²", "2x²", "x", "x²/2"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 1, c: 1,
+        opcoes: ["y = x² + 1", "y = x² - 1", "y = -x² + 1", "y = -x² - 1"],
         correta: 0
     },
     {
-        pergunta: "Calcule a área total de um cone com raio 3 e geratriz 5 (use π=3).",
-        opcoes: ["72", "60", "48", "36"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -1, c: -1,
+        opcoes: ["y = -x² - 1", "y = -x² + 1", "y = x² - 1", "y = x² + 1"],
         correta: 0
     },
     {
-        pergunta: "Calcule o volume de uma esfera de raio 3 (use π=3).",
-        opcoes: ["108", "36", "72", "12"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 2, c: -18,
+        opcoes: ["y = 2x² - 18", "y = -2x² - 18", "y = 2x² + 18", "y = x² - 18"],
         correta: 0
     },
     {
-        pergunta: "Qual a área total de um cubo de lado x?",
-        opcoes: ["6x²", "x³", "4x²", "2x²"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -2, c: 18,
+        opcoes: ["y = -2x² + 18", "y = 2x² + 18", "y = -2x² - 18", "y = -x² + 18"],
         correta: 0
     },
     {
-        pergunta: "Qual o volume de um cubo de lado x?",
-        opcoes: ["x³", "6x²", "x²", "4x³"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: 0.5, c: -8,
+        opcoes: ["y = 0,5x² - 8", "y = -0,5x² - 8", "y = 0,5x² + 8", "y = 2x² - 8"],
         correta: 0
     },
     {
-        pergunta: "Calcule o volume de um cone com raio 4 e altura 6 (use π=3).",
-        opcoes: ["96", "72", "48", "144"],
+        pergunta: "Qual é a equação da função do 2º grau representada no gráfico abaixo?",
+        a: -0.5, c: 8,
+        opcoes: ["y = -0,5x² + 8", "y = 0,5x² + 8", "y = -0,5x² - 8", "y = -2x² + 8"],
         correta: 0
     }
 ];
+
+// ===== GERADOR DE SVG DO GRÁFICO (GRANDE E LEGÍVEL DE LONGE) =====
+function gerarSVG(a, c) {
+    const width = 500;
+    const height = 320;
+    const X0 = width / 2;
+    const Y0 = height / 2;
+
+    const scaleX = 40;
+    const absC = Math.abs(c);
+
+    let scaleY = 20;
+    if (absC > 20) scaleY = 5;
+    else if (absC > 10) scaleY = 10;
+    else if (absC > 5) scaleY = 14;
+
+    const Y_vertice = Y0 - (c * scaleY);
+
+    let pathD = "";
+    const xMin = -5;
+    const xMax = 5;
+    const step = 0.05;
+
+    let isFirst = true;
+    for (let x = xMin; x <= xMax; x += step) {
+        const y = a * x * x + c;
+        const px = X0 + x * scaleX;
+        const py = Y0 - y * scaleY;
+
+        if (py >= -60 && py <= height + 60) {
+            if (isFirst) {
+                pathD += `M ${px.toFixed(1)} ${py.toFixed(1)}`;
+                isFirst = false;
+            } else {
+                pathD += ` L ${px.toFixed(1)} ${py.toFixed(1)}`;
+            }
+        }
+    }
+
+    let raizesHTML = "";
+    if (a * c < 0) {
+        const r = Math.sqrt(-c / a);
+        if (r <= 4.8) {
+            const xR1 = X0 - r * scaleX;
+            const xR2 = X0 + r * scaleX;
+            const labelR1 = (Number.isInteger(r) ? -r : (-r).toFixed(1)).toString().replace('.', ',');
+            const labelR2 = (Number.isInteger(r) ? r : r.toFixed(1)).toString().replace('.', ',');
+
+            raizesHTML = `
+                <circle cx="${xR1.toFixed(1)}" cy="${Y0}" r="6" fill="#059669" stroke="#ffffff" stroke-width="2"/>
+                <circle cx="${xR2.toFixed(1)}" cy="${Y0}" r="6" fill="#059669" stroke="#ffffff" stroke-width="2"/>
+                <text x="${xR1.toFixed(1)}" y="${Y0 + 22}" fill="#047857" font-size="16" font-weight="bold" text-anchor="middle">${labelR1}</text>
+                <text x="${xR2.toFixed(1)}" y="${Y0 + 22}" fill="#047857" font-size="16" font-weight="bold" text-anchor="middle">${labelR2}</text>
+            `;
+        }
+    }
+
+    let labelVerticeY = Y_vertice + (c >= 0 ? -14 : 26);
+    if (c === 0) labelVerticeY = Y0 + 22;
+
+    const textoVertice = c === 0 ? "(0, 0)" : `(0, ${c > 0 ? '+' + c : c})`;
+
+    let gridLines = "";
+    for (let gx = -4; gx <= 4; gx += 2) {
+        if (gx !== 0) {
+            const px = X0 + gx * scaleX;
+            gridLines += `<line x1="${px}" y1="15" x2="${px}" y2="${height - 15}" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4"/>`;
+        }
+    }
+
+    return `
+        <svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="arrowX" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e293b"/>
+                </marker>
+                <marker id="arrowY" viewBox="0 0 10 10" refX="5" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                    <path d="M 0 10 L 5 0 L 10 10 z" fill="#1e293b"/>
+                </marker>
+            </defs>
+
+            <rect width="${width}" height="${height}" fill="#ffffff" rx="16" stroke="#cbd5e1" stroke-width="2"/>
+            
+            ${gridLines}
+
+            <!-- Eixo X -->
+            <line x1="20" y1="${Y0}" x2="${width - 25}" y2="${Y0}" stroke="#1e293b" stroke-width="3" marker-end="url(#arrowX)"/>
+            <text x="${width - 20}" y="${Y0 + 6}" fill="#1e293b" font-size="22" font-weight="bold">x</text>
+
+            <!-- Eixo Y -->
+            <line x1="${X0}" y1="${height - 20}" x2="${X0}" y2="25" stroke="#1e293b" stroke-width="3" marker-end="url(#arrowY)"/>
+            <text x="${X0 - 15}" y="20" fill="#1e293b" font-size="22" font-weight="bold">y</text>
+
+            ${c !== 0 ? `<text x="${X0 - 14}" y="${Y0 + 18}" fill="#64748b" font-size="15" font-weight="bold">0</text>` : ''}
+
+            <!-- Parábola -->
+            <path d="${pathD}" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Vértice -->
+            <circle cx="${X0}" cy="${Y_vertice.toFixed(1)}" r="7" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+            <rect x="${X0 + 10}" y="${labelVerticeY - 14}" width="78" height="24" fill="#fee2e2" rx="6" stroke="#fca5a5" stroke-width="1"/>
+            <text x="${X0 + 49}" y="${labelVerticeY + 3}" fill="#dc2626" font-size="16" font-weight="bold" text-anchor="middle">${textoVertice}</text>
+
+            <!-- Raízes -->
+            ${raizesHTML}
+
+            <!-- Concavidade -->
+            <text x="25" y="45" fill="#334155" font-size="16" font-weight="bold">
+                ${a > 0 ? 'Concavidade: Voltada para CIMA (a > 0)' : 'Concavidade: Voltada para BAIXO (a < 0)'}
+            </text>
+        </svg>
+    `;
+}
 
 // ===== ELEMENTOS DOM =====
 const cardsContainer = document.getElementById('cards-container');
@@ -303,7 +466,7 @@ function resetarTimerDisplay() {
     if (timerEl) timerEl.textContent = '⏱️ 00:00';
 }
 
-// ===== FUNÇÃO PARA EMBARALHAR ARRAY =====
+// ===== EMBARALHAR ARRAY =====
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -325,24 +488,27 @@ if (cardsContainer) {
     }
 }
 
-// ===== FUNÇÃO PARA ABRIR MODAL =====
+// ===== ABRIR PERGUNTA E MOSTRAR GRÁFICO =====
 function abrirPergunta(index, cardElement) {
     if (cardElement.classList.contains('hidden-card')) return;
     currentCardIndex = index;
     const perguntaObj = perguntas[index % perguntas.length];
 
-    // Cria uma cópia das opções e índices, e embaralha
     const opcoesComIndices = perguntaObj.opcoes.map((texto, idx) => ({ texto, idx }));
     const embaralhadas = shuffleArray([...opcoesComIndices]);
     const opcoesEmbaralhadas = embaralhadas.map(item => item.texto);
     const novoIndiceCorreto = embaralhadas.findIndex(item => item.idx === perguntaObj.correta);
 
-    // Monta o HTML com as opções embaralhadas
+    const svgHTML = gerarSVG(perguntaObj.a, perguntaObj.c);
+
     let html = `
         <div class="question-text">${perguntaObj.pergunta}</div>
         <div class="score-display">
             <span>🏆 Acertos: <span id="scoreDisplay">${score}</span></span>
             <span class="timer-display" id="timerDisplay">⏱️ 00:00</span>
+        </div>
+        <div class="graph-container">
+            ${svgHTML}
         </div>
         <div class="options-grid" id="optionsGrid">
     `;
@@ -360,13 +526,10 @@ function abrirPergunta(index, cardElement) {
     `;
     questionContent.innerHTML = html;
 
-    // Armazena o índice correto embaralhado
     window._indiceCorretoAtual = novoIndiceCorreto;
 
-    // Inicia cronômetro
     iniciarCronometro();
 
-    // Eventos das opções
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             if (isAnswered) return;
@@ -379,7 +542,7 @@ function abrirPergunta(index, cardElement) {
     expandedQuestion.classList.add('show');
 }
 
-// ===== FUNÇÃO PARA RESPONDER =====
+// ===== RESPONDER PERGUNTA =====
 function responderPergunta(optIndex, perguntaObj, cardElement, indiceCorretoEmbaralhado) {
     if (isAnswered) return;
     isAnswered = true;
@@ -396,12 +559,12 @@ function responderPergunta(optIndex, perguntaObj, cardElement, indiceCorretoEmba
     if (acertou) {
         score++;
         if (scoreSpan) scoreSpan.textContent = score;
-        feedbackMsg.textContent = '✅ Resposta correta!';
+        feedbackMsg.textContent = '✅ Resposta correta! Essa é a equação do gráfico.';
         feedbackMsg.className = 'feedback-msg show correct';
     } else {
         const letras = ['A', 'B', 'C', 'D'];
         const letraCorreta = letras[indiceCorretoEmbaralhado];
-        feedbackMsg.textContent = `❌ Resposta incorreta. A correta era a letra ${letraCorreta}.`;
+        feedbackMsg.textContent = `❌ Resposta incorreta. A equação correta era a letra ${letraCorreta}.`;
         feedbackMsg.className = 'feedback-msg show wrong';
     }
 
@@ -426,7 +589,6 @@ function fecharModal() {
     isAnswered = false;
 }
 
-// ===== EVENTOS =====
 if (closeModalBtn) {
     closeModalBtn.addEventListener('click', fecharModal);
 }
